@@ -1,0 +1,573 @@
+﻿[
+	{
+		"id": "0111",
+		"text": "Cultivo de cereales (excepto arroz)"
+	},
+	{
+		"id": "0112",
+		"text": "Cultivo de arroz "
+	},
+	{
+		"id": "0113",
+		"text": "Cultivo de hortalizas"
+	},
+	{
+		"id": "0114",
+		"text": "Cultivo de tabaco "
+	},
+	{
+		"id": "0115",
+		"text": "Cultivo de plantas textiles "
+	},
+	{
+		"id": "0119",
+		"text": "Otros cultivos transitorios n.c.p."
+	},
+	{
+		"id": "0121",
+		"text": "Cultivo de frutas tropicales y subtropicales"
+	},
+	{
+		"id": "0122",
+		"text": "Cultivo de plátano y banano"
+	},
+	{
+		"id": "0123",
+		"text": "Cultivo de café"
+	},
+	{
+		"id": "0124",
+		"text": "Cultivo de caña de azúcar"
+	},
+	{
+		"id": "0125",
+		"text": "Cultivo de flor de corte"
+	},
+	{
+		"id": "0126",
+		"text": "Cultivo de palma para aceite (palma africana) y otros frutos oleaginosos"
+	},
+	{
+		"id": "0127",
+		"text": "Cultivo de plantas con las que se preparan bebidas"
+	},
+	{
+		"id": "0128",
+		"text": "Cultivo de especias y de plantas aromáticas y medicinales "
+	},
+	{
+		"id": "0129",
+		"text": "Otros cultivos permanentes n.c.p."
+	},
+	{
+		"id": "0130",
+		"text": "Propagación de plantas (actividades de los viveros"
+	},
+	{
+		"id": "0141",
+		"text": "Cría de ganado bovino y bufalino"
+	},
+	{
+		"id": "0142",
+		"text": "Cría de caballos y otros equinos "
+	},
+	{
+		"id": "0143",
+		"text": "Cría de ovejas y cabras "
+	},
+	{
+		"id": "0144",
+		"text": "Cría de ganado porcino"
+	},
+	{
+		"id": "0145",
+		"text": "Cría de aves de corral"
+	},
+	{
+		"id": "0149",
+		"text": "Cría de otros animales n.c.p."
+	},
+	{
+		"id": "0150",
+		"text": "Explotación mixta (agrícola y pecuaria) "
+	},
+	{
+		"id": "0161",
+		"text": "Actividades de apoyo a la agricultura "
+	},
+	{
+		"id": "0162",
+		"text": "Actividades de apoyo a la ganadería"
+	},
+	{
+		"id": "0163",
+		"text": "Actividades posteriores a la cosecha "
+	},
+	{
+		"id": "0164",
+		"text": "Tratamiento de semillas para propagación "
+	},
+	{
+		"id": "0170",
+		"text": "Caza ordinaria y mediante trampas y actividades de servicios conexas "
+	},
+	{
+		"id": "0210",
+		"text": "Silvicultura y otras actividades forestales"
+	},
+	{
+		"id": "0220",
+		"text": "Extracción de madera "
+	},
+	{
+		"id": "0230",
+		"text": "Recolección de productos forestales diferentes a la madera"
+	},
+	{
+		"id": "0240",
+		"text": "Servicios de apoyo a la silvicultura "
+	},
+	{
+		"id": "0311",
+		"text": "Pesca marítima "
+	},
+	{
+		"id": "0312",
+		"text": "Pesca de agua dulce "
+	},
+	{
+		"id": "0321",
+		"text": "Acuicultura marítima "
+	},
+	{
+		"id": "0322",
+		"text": "Acuicultura de agua dulce"
+	},
+	{
+		"id": "0510",
+		"text": "Extracción de hulla (carbón de piedra)"
+	},
+	{
+		"id": "0520",
+		"text": "Extracción de carbón lignito"
+	},
+	{
+		"id": "0610",
+		"text": "Extracción de petróleo crudo"
+	},
+	{
+		"id": "0620",
+		"text": "Extracción de gas natural"
+	},
+	{
+		"id": "0721",
+		"text": "Extracción de minerales de uranio y de torio"
+	},
+	{
+		"id": "0722",
+		"text": "Extracción de oro y otros metales preciosos"
+	},
+	{
+		"id": "0723",
+		"text": "Extracción de minerales de níquel"
+	},
+	{
+		"id": "0729",
+		"text": "Extracción de otros minerales metalíferos no ferrosos n.c.p."
+	},
+	{
+		"id": "0811",
+		"text": "Extracción de piedra"
+	},
+	{
+		"id": "0812",
+		"text": "Extracción de arcillas de uso industrial"
+	},
+	{
+		"id": "0820",
+		"text": "Extracción de esmeraldas"
+	},
+	{
+		"id": "0891",
+		"text": "Extracción de minerales para la fabricación de abonos y productos químicos"
+	},
+	{
+		"id": "0892",
+		"text": "Extracción de halita (sal)"
+	},
+	{
+		"id": "0899",
+		"text": "Extracción de otros minerales no metálicos n.c.p."
+	},
+	{
+		"id": "0910",
+		"text": "Actividades de apoyo para la extracción de petróleo y de gas natural"
+	},
+	{
+		"id": "0990",
+		"text": "Actividades de apoyo para otras actividades de explotación de minas y canteras"
+	},
+	{
+		"id": "1011",
+		"text": "Procesamiento y conservación de carne y productos cárnicos"
+	},
+	{
+		"id": "1012",
+		"text": "Procesamiento y conservación de pescados"
+	},
+	{
+		"id": "1020",
+		"text": "Procesamiento y conservación de frutas"
+	},
+	{
+		"id": "1030",
+		"text": "Elaboración de aceites y grasas de origen vegetal y animal"
+	},
+	{
+		"id": "1040",
+		"text": "Elaboración de productos lácteos"
+	},
+	{
+		"id": "1051",
+		"text": "Elaboración de productos de molinería"
+	},
+	{
+		"id": "1052",
+		"text": "Elaboración de almidones y productos derivados del almidón"
+	},
+	{
+		"id": "1061",
+		"text": "Trilla de café"
+	},
+	{
+		"id": "1062",
+		"text": "Descafeinado"
+	},
+	{
+		"id": "1063",
+		"text": "Otros derivados del café"
+	},
+	{
+		"id": "1071",
+		"text": "Elaboración y refinación de azúcar"
+	},
+	{
+		"id": "1072",
+		"text": "Elaboración de panela"
+	},
+	{
+		"id": "1081",
+		"text": "Elaboración de productos de panadería"
+	},
+	{
+		"id": "1082",
+		"text": "Elaboración de cacao"
+	},
+	{
+		"id": "1083",
+		"text": "Elaboración de macarrones"
+	},
+	{
+		"id": "1084",
+		"text": "Elaboración de comidas y platos preparados"
+	},
+	{
+		"id": "1089",
+		"text": "Elaboración de otros productos alimenticios n.c.p."
+	},
+	{
+		"id": "1090",
+		"text": "Elaboración de alimentos preparados para animales"
+	},
+	{
+		"id": "1101",
+		"text": "Destilación"
+	},
+	{
+		"id": "1102",
+		"text": "Elaboración de bebidas fermentadas no destiladas"
+	},
+	{
+		"id": "1103",
+		"text": "Producción de malta"
+	},
+	{
+		"id": "1200",
+		"text": "Elaboración de productos de tabaco"
+	},
+	{
+		"id": "1311",
+		"text": "Preparación e hilatura de fibras textiles"
+	},
+	{
+		"id": "1312",
+		"text": "Tejeduría de productos textiles"
+	},
+	{
+		"id": "1313",
+		"text": "Acabado de productos textiles"
+	},
+	{
+		"id": "1391",
+		"text": "Fabricación de tejidos de punto y ganchillo"
+	},
+	{
+		"id": "1392",
+		"text": "Confección de artículos con materiales textiles"
+	},
+	{
+		"id": "1393",
+		"text": "Fabricación de tapetes y alfombras para pisos"
+	},
+	{
+		"id": "1394",
+		"text": "Fabricación de cuerdas"
+	},
+	{
+		"id": "1399",
+		"text": "Fabricación de otros artículos textiles n.c.p."
+	},
+	{
+		"id": "1410",
+		"text": "Confección de prendas de vestir"
+	},
+	{
+		"id": "1420",
+		"text": "Fabricación de artículos de piel"
+	},
+	{
+		"id": "1430",
+		"text": "Fabricación de artículos de punto y ganchillo"
+	},
+	{
+		"id": "1511",
+		"text": "Curtido y recurtido de cueros; recurtido y teñido de pieles"
+	},
+	{
+		"id": "1512",
+		"text": "Fabricación de artículos de viaje"
+	},
+	{
+		"id": "1513",
+		"text": "Fabricación de artículos de viaje"
+	},
+	{
+		"id": "",
+		"text": "Fabricación de calzado"
+	},
+	{
+		"id": "1521",
+		"text": "Fabricación de calzado de cuero y piel"
+	},
+	{
+		"id": "1522",
+		"text": "Fabricación de otros tipos de calzado"
+	},
+	{
+		"id": "1523",
+		"text": "Fabricación de partes del calzado"
+	},
+	{
+		"id": "1610",
+		"text": "Aserrado"
+	},
+	{
+		"id": "1620",
+		"text": "Fabricación de hojas de madera para enchapado; fabricación de tableros contrachapados"
+	},
+	{
+		"id": "1630",
+		"text": "Fabricación de partes y piezas de madera"
+	},
+	{
+		"id": "1640",
+		"text": "Fabricación de recipientes de madera"
+	},
+	{
+		"id": "1690",
+		"text": "Fabricación de otros productos de madera; fabricación de artículos de corcho"
+	},
+	{
+		"id": "1701",
+		"text": "Fabricación de pulpas (pastas) celulósicas; papel y cartón"
+	},
+	{
+		"id": "1702",
+		"text": "Fabricación de papel y cartón ondulado (corrugado); fabricación de envases"
+	},
+	{
+		"id": "1709",
+		"text": "Fabricación de otros artículos de papel y cartón"
+	},
+	{
+		"id": "1811",
+		"text": "Actividades de impresión"
+	},
+	{
+		"id": "1812",
+		"text": "Actividades de servicios relacionados con la impresión"
+	},
+	{
+		"id": "1820",
+		"text": "Producción de copias a partir de grabaciones originales "
+	},
+	{
+		"id": "1811",
+		"text": "Actividades de impresión"
+	},
+	{
+		"id": "1812",
+		"text": "Actividades de servicios relacionados con la impresión"
+	},
+	{
+		"id": "1820",
+		"text": "Producción de copias a partir de grabaciones originales "
+	},
+	{
+		"id": "2011",
+		"text": "Fabricación de sustancias y productos químicos básicos"
+	},
+	{
+		"id": "2012",
+		"text": "Fabricación de abonos y compuestos inorgánicos nitrogenados"
+	},
+	{
+		"id": "2013",
+		"text": "Fabricación de plásticos en formas primarias"
+	},
+	{
+		"id": "2014",
+		"text": "Fabricación de caucho sintético en formas primarias"
+	},
+	{
+		"id": "",
+		"text": "Fabricación de otros productos químicos"
+	},
+	{
+		"id": "2021",
+		"text": "Fabricación de plaguicidas y otros productos químicos de uso agropecuario"
+	},
+	{
+		"id": "2022",
+		"text": "Fabricación de pinturas"
+	},
+	{
+		"id": "2023",
+		"text": "Fabricación de jabones y detergentes"
+	},
+	{
+		"id": "2029",
+		"text": "Fabricación de otros productos químicos n.c.p."
+	},
+	{
+		"id": "2030",
+		"text": "Fabricación de fibras sintéticas y artificiales"
+	},
+	{
+		"id": "2211",
+		"text": "Fabricación de llantas y neumáticos de caucho"
+	},
+	{
+		"id": "2212",
+		"text": "Reencauche de llantas usadas"
+	},
+	{
+		"id": "2219",
+		"text": "Fabricación de formas básicas de caucho y otros productos de caucho n.c.p."
+	},
+	{
+		"id": "2221",
+		"text": "Fabricación de formas básicas de plástico"
+	},
+	{
+		"id": "2229",
+		"text": "Fabricación de artículos de plástico n.c.p."
+	},
+	{
+		"id": "2310",
+		"text": "Fabricación de vidrio y productos de vidrio"
+	},
+	{
+		"id": "2391",
+		"text": "Fabricación de productos refractarios"
+	},
+	{
+		"id": "2392",
+		"text": "Fabricación de materiales de arcilla para la construcción"
+	},
+	{
+		"id": "2393",
+		"text": "Fabricación de otros productos de cerámica y porcelana"
+	},
+	{
+		"id": "2394",
+		"text": "Fabricación de cemento"
+	},
+	{
+		"id": "2395",
+		"text": "Fabricación de artículos de hormigón"
+	},
+	{
+		"id": "2396",
+		"text": "Corte"
+	},
+	{
+		"id": "2399",
+		"text": "Fabricación de otros productos minerales no metálicos n.c.p."
+	},
+	{
+		"id": "2610",
+		"text": "Fabricación de componentes y tableros electrónicos"
+	},
+	{
+		"id": "2620",
+		"text": "Fabricación de computadoras y de equipo periférico"
+	},
+	{
+		"id": "2630",
+		"text": "Fabricación de equipos de comunicación"
+	},
+	{
+		"id": "2640",
+		"text": "Fabricación de aparatos electrónicos de consumo"
+	},
+	{
+		"id": "2651",
+		"text": "Fabricación de equipo de medición"
+	},
+	{
+		"id": "2652",
+		"text": "Fabricación de relojes"
+	},
+	{
+		"id": "2660",
+		"text": "Fabricación de equipo de irradiación y equipo electrónico de uso médico y terapéutico"
+	},
+	{
+		"id": "2670",
+		"text": "Fabricación de instrumentos ópticos y equipo fotográfico"
+	},
+	{
+		"id": "2680",
+		"text": "Fabricación de medios magnéticos y ópticos para almacenamiento de datos"
+	},
+	{
+		"id": "9511",
+		"text": "Mantenimiento y reparación de computadores y de equipo periférico"
+	},
+	{
+		"id": "9512",
+		"text": "Mantenimiento y reparación de equipos de comunicación"
+	},
+	{
+		"id": "9521",
+		"text": "Mantenimiento y reparación de aparatos electrónicos de consumo"
+	},
+	{
+		"id": "9522",
+		"text": "Mantenimiento y reparación de aparatos y equipos domésticos y de jardinería "
+	},
+	{
+		"id": ""
+	}
+]
