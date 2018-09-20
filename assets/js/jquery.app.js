@@ -40,7 +40,7 @@
 function(t) {
     "use strict";
     window.jQuery.App.init()
-    alert('sdas')
+   
 
     setTimeout(function(){
         jQuery(".navbar-toggle").on("click", function(e) {  
