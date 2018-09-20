@@ -18,7 +18,7 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
             "id_categoria": $scope.categoria ,
             'token': '' 
         }
-        var url = $rootScope.baseUri + "/rest_diagnostico/public/visitas/crear";
+        var url = $rootScope.baseUri + "/pruebas_back/visitas/crear";
 
         var success = function (json) {
             console.log(json)

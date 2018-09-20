@@ -125,7 +125,7 @@ IdentiApp.controller("LoginController", ['$scope', '$location', '$rootScope', '$
 	        if (jQuery('#myform').valid()) {
 	            var user = { "UsuaUsua": "", "UsuaPwd": "" };	          
 	            var Ctrl = this;
-	            var Url =  $rootScope.baseUri + "/rest_diagnostico/public/api/index/aut";
+	            var Url =  $rootScope.baseUri + "/pruebas_back/api/index/aut";
 	             var success = function (json) {	
 
 	                if (json.data.status != "OK") {

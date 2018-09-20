@@ -23,7 +23,7 @@ function ( $http ,Enviar, Cargar, $location, $route, $scope, $rootScope, $modal,
         $scope.empresaJson.correo = $rootScope.user.correo;
         $scope.empresaJson.token = ''
 
-        var url = $rootScope.baseUri + "/rest_diagnostico/public/empresas/crear";
+        var url = $rootScope.baseUri + "/pruebas_back/empresas/crear";
 
         var success = function (json) {
             console.log(json)
