@@ -167,12 +167,17 @@ IdentiApp.controller("LoginController", ['$scope', '$location', '$rootScope', '$
 			$location.path('/CreacionSyllabus');
 		}
 
+		
+	
+	
 
 	    sessionStorage.clear();
 	    $rootScope.permissions = []; 	
 	    sessionStorage.clear();
 	    $rootScope.permissions = [];
-	    $rootScope.user = '';
+		$rootScope.user = '';
+		
+    
 	}
 ]);
 

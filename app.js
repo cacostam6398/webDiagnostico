@@ -8,7 +8,7 @@ var IdentiApp = angular.module('Identi', ['ngRoute', 'ui.bootstrap', 'ui.tree', 
 
 IdentiApp.run(function ($rootScope, $location, $http) {
     console.log('http://',location.host);
-    $rootScope.baseUri = 'http://'+ location.host + '/pruebas_back' ;
+    $rootScope.baseUri = 'http://'+ location.host + '/rest_diagnostico/public' ;
    
     var storage;
     try {
@@ -31,6 +31,8 @@ IdentiApp.run(function ($rootScope, $location, $http) {
     $rootScope.$on('$routeChangeSuccess', function () {
 
         try {
+
+           
             if (sessionStorage.getItem('user')) {
                 if ($rootScope.user != null || typeof $rootScope.user != 'undefined') {
                     $rootScope.user = JSON.parse(sessionStorage.user)
