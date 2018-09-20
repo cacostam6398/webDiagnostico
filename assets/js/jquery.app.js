@@ -49,7 +49,7 @@ function(t) {
             jQuery("#navigation").slideToggle(400)           
         })
 
-    },800)
+    },1000)
    
 
 
