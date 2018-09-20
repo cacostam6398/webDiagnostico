@@ -7,13 +7,11 @@ function ( $http ,Enviar, Cargar, $location, $route, $scope, $rootScope, $modal,
 
     $scope.empresaJson= {};
   
-    $http.get('../web/js/services/RazonesSociales.json').then(function(data) {
-       
+    $http.get('js/services/RazonesSociales.json').then(function(data) {       
         $scope.razonesSociales = data.data;
         $(".js-example-data-array").select2({
             data: data.data
           })
-
      });
 
 
@@ -23,7 +21,7 @@ function ( $http ,Enviar, Cargar, $location, $route, $scope, $rootScope, $modal,
         $scope.empresaJson.correo = $rootScope.user.correo;
         $scope.empresaJson.token = ''
 
-        var url = $rootScope.baseUri + "/pruebas_back/empresas/crear";
+        var url = $rootScope.baseUri + "/empresas/crear";
 
         var success = function (json) {
             console.log(json)
@@ -40,9 +38,6 @@ function ( $http ,Enviar, Cargar, $location, $route, $scope, $rootScope, $modal,
 
     }
 
-    $scope.GoHome = function(){     	
-        $location.path('/home');
-    }
-
+   
 }
 ]); 

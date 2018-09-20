@@ -22,9 +22,12 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
         $location.path('/crearEmpresa');
     }
 
-    $rootScope.GoHome = function(){  
-        $location.path('/home');
+    $rootScope.GoDiagnostico = function(){    
+        var empresaId = $(".js-example-basic-single").val();
+        console.log(empresaId)    
+        $location.path('/diagnosticoEmpresa/'+empresaId);
     }
+    
 
 
     this.ListSyllabus = []

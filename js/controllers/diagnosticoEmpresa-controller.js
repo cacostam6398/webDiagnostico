@@ -1,7 +1,7 @@
 ﻿
 
 
-IdentiApp.controller("crearVisitaController", ['Enviar', 'Cargar', '$location', '$route', '$scope', '$rootScope', '$modal', '$filter','$routeParams',
+IdentiApp.controller("diagnosticoEmpresaController", ['Enviar', 'Cargar', '$location', '$route', '$scope', '$rootScope', '$modal', '$filter','$routeParams',
 function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter,$routeParams) {
       
 

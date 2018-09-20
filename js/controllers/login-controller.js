@@ -125,20 +125,20 @@ IdentiApp.controller("LoginController", ['$scope', '$location', '$rootScope', '$
 	        if (jQuery('#myform').valid()) {
 	            var user = { "UsuaUsua": "", "UsuaPwd": "" };	          
 	            var Ctrl = this;
-	            var Url =  $rootScope.baseUri + "/pruebas_back/api/index/aut";
+	            var Url =  $rootScope.baseUri + "/api/index/aut";
 	             var success = function (json) {	
 
 	                if (json.data.status != "OK") {
 	                    $scope.message = 'Usuario o Contraseña incorrectos';
 	                    swal("Error", $scope.message, "info");
 	                } else {	                
-					
-					
+										
 						sessionStorage.user = JSON.stringify(json.data.usuario);						
 						// sessionStorage.token =  json.data.token;
 						$rootScope.user = json.data.usuario;
 						// $rootScope.token = json.data.token;
-	                    console.log($rootScope.user);	  
+						console.log($rootScope.user);	
+						console.log($rootScope);	  
 	                    $location.path('/home');
 	                }
 	             };
@@ -161,11 +161,7 @@ IdentiApp.controller("LoginController", ['$scope', '$location', '$rootScope', '$
 			$location.path('/login');
 		}		
 
-		
-		
-		$rootScope.GoHome = function(){				
-			$location.path('/home');
-		}
+			
 
 		$rootScope.GoCreacionSyllabus = function(){		
 			$location.path('/CreacionSyllabus');
