@@ -12,12 +12,61 @@ function ( $http ,Enviar, Cargar, $location, $route, $scope, $rootScope, $modal,
         $(".js-example-data-array").select2({
             data: data.data
           })
-     });
+     });  
+
+     jQuery('form[id="formEmpresa"]').validate({ // initialize the plugin
+        rules: {
+           
+            razon_social: {
+                required: true,
+         
+            },
+            nit: {
+                required: true,
+                // minlength: 5
+            },
+            afiliacion: {
+                required: true,
+                // minlength: 5
+            },
+            web: {
+                required: true,
+                // minlength: 5
+            },
+            repr_legal: {
+                required: true,
+                // minlength: 5
+            },
+            ger_general: {
+                required: true,
+                // minlength: 5
+            },
+            direccion: {
+                required: true,
+                // minlength: 5
+            },
+            constitucion: {
+                required: true,
+                // minlength: 5
+            },
+            ccit: {
+                required: true,
+                // minlength: 5
+            }           
+
+        },
+        
+        submitHandler: function (form) { // for demo
+       
+            return false; // for demo
+        }
+    });
+
 
 
     $scope.enviarEmpresa = function(){
         
-        $scope.empresaJson.razon_social = $(".js-example-data-array").val();
+        $scope.empresaJson.ciu  = $(".js-example-data-array").val();
         $scope.empresaJson.correo = $rootScope.user.correo;
         $scope.empresaJson.token = ''
 
@@ -25,16 +74,16 @@ function ( $http ,Enviar, Cargar, $location, $route, $scope, $rootScope, $modal,
 
         var success = function (json) {
             console.log(json)
-            swal("info", 'Se creo Empresa', "success");
-         
+            swal("info", 'Se creo Empresa', "success");         
             $scope.empresaJson= {};
         };
         var error = function (resp) {    
             console.log(resp)                  
             swal("info", 'Error en el servicio', "info")
         };
-        Enviar.elemento($scope, url, success, error, $scope.empresaJson);
-
+        if (jQuery('form[id="formEmpresa"]').valid()) {  
+            Enviar.elemento($scope, url, success, error, $scope.empresaJson);
+        }
 
     }
 

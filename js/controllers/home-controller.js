@@ -14,8 +14,13 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
     $rootScope.GoCrearVisita = function(){   
         
         var empresaId = $(".js-example-basic-single").val();
+        var nameEmpresa = $('.js-example-basic-single').select2('data')[0].text;     
+        
+
+
         console.log(empresaId)
-        $location.path('/crearVisita/'+empresaId);
+        console.log(nameEmpresa)
+         $location.path('/crearVisita/'+empresaId + '/' + nameEmpresa);
     }
 
     $rootScope.GoCrearEmpresa = function(){        
@@ -30,29 +35,32 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
     
 
 
-    this.ListSyllabus = []
+    this.ListEmpresas = []
 
     this.cargarListaEmpresas = function () {
 
         var jsonEnvio = {
-            'id_usuario': $rootScope.user.id_usuario,
-            'token': $rootScope.token
+            'id_usuario': $rootScope.user.correo,
+            'token': ''
         }
-        var url = $rootScope.baseUri + "/restapi-syllabusean/public/usuarios/listarsyl";
+      
+        var url =  $rootScope.baseUri + "/empresas/listar";
         var Ctrl = this;
         var success = function (json) {
-            Ctrl.ListSyllabus = json.data.Syllabus;
+            Ctrl.ListEmpresas = json.data.empresas;
         };
         var error = function (resp) {
             console.log("Error: " + resp);
             jQuery(".progress").hide();
         };
-        Enviar.elemento(Ctrl, url, success, error, jsonEnvio);
+         Enviar.elemento(Ctrl, url, success, error, jsonEnvio);
 
     }
 
-    //  this.cargarListaSyllabus();
+      
 
-    $scope.initSelect2();
+        $scope.initSelect2();
+        
+        this.cargarListaEmpresas();
 }
 ]); 

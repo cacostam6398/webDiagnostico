@@ -6,37 +6,93 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
       
 
     $scope.empresaId = $routeParams.EmpId;
-    $scope.comentario = ''
-    $scope.categoria  = ''
+    $scope.nomEmpresa = $routeParams.nomEmp
+    this.comentario = ''
+    this.categoria  = ''
 
-    $scope.enviarVista = function(){
-        
+    jQuery('form[id="formVisita"]').validate({ // initialize the plugin
+        rules: {
+           
+            SelectCategoria: {
+                required: true,
+         
+            },
+            comentario: {
+                required: true,
+                minlength: 4
+            }
+
+        },
+        messages: {
+            SelectCategoria: "Este campo es requerido.",
+            comentario: {
+              required: "Este campo es requerido.",
+              minlength: "Por favor ingrese al menos 4 caracteres."
+            }
+          },
+        submitHandler: function (form) { // for demo
+       
+            return false; // for demo
+        }
+    });
+
+    $scope.enviarVista = function(jsonValues){
+    
+        var Ctrl = this;
         var jsonEnvio = {
             'correo': $rootScope.user.correo,
             'id_empresa':  $scope.empresaId ,
-            "comentario":  $scope.comentario,
-            "id_categoria": $scope.categoria ,
+            "comentario":  Ctrl.crtvisCtrl.comentario,
+            "id_categoria": Ctrl.crtvisCtrl.categoria ,
             'token': '' 
         }
         var url = $rootScope.baseUri + "/visitas/crear";
 
         var success = function (json) {
-            console.log(json)
+           
             swal("info", 'Se creo visita', "success");
-         
-            $scope.comentario = ''
-            $scope.categoria  = ''
+        
+            Ctrl.crtvisCtrl.comentario = ''
+            Ctrl.crtvisCtrl.categoria  = ''
         };
         var error = function (resp) {    
             console.log(resp)                  
             swal("info", 'Error en el servicio', "info")
         };
-        Enviar.elemento($scope, url, success, error, jsonEnvio);
+
+        var valid =jQuery('#formVisita').valid()
+
+        if (jQuery('#formVisita').valid()) {     
+            Enviar.elemento(Ctrl, url, success, error, jsonEnvio);
+        }
 
 
     }
 
- 
+    this.ListCategorias = []
 
+    this.cargarListaCategorias = function () {
+
+        var jsonEnvio = {
+            'id_usuario': $rootScope.user.correo,
+            'token': ''
+        }
+      
+        var url =  $rootScope.baseUri + "/visitas/categorias";
+        var Ctrl = this;
+        var success = function (json) {
+            Ctrl.ListCategorias = json.data.categorias;  
+
+        };
+        var error = function (resp) {
+            console.log("Error: " + resp);
+            jQuery(".progress").hide();
+        };
+         Enviar.elemento(Ctrl, url, success, error, jsonEnvio);
+
+    }
+
+ 
+    this.cargarListaCategorias();
 }
 ]); 

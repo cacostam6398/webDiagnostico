@@ -7,7 +7,7 @@
                     <li class="breadcrumb-item"><a style="cursor: pointer;" target="_self"  ng-click="GoHome()">Inicio / Crear Visita</a></li>
                   
                 </ol>
-                <h4 class="page-title">Crear Visita </h4></div>
+                <h4 class="page-title">Crear Visita  para <b style="text-decoration: underline;">{{nomEmpresa}}</b></h4></div>
       
 
                              <!-- Form row -->
@@ -16,25 +16,26 @@
                         <div class="card-box">
                             <h4 class="m-t-0 header-title"></h4>
                           
-                            <form>
-                          
+                            <form name="formVisita" id="formVisita">
+              
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                            <label for="inputState" class="col-form-label">Categoria</label>
-                                            <select id="inputState" class="form-control" ng-model="categoria">
-                                                <option value=""  >Seleccionar</option>
-                                                <option value="1">1 Categoria</option>
-                                                <option value="2">2 Categoria</option>
-                                                <option value="3">3 Categoria</option>
+                                            <label for="SelectCategoria" class="col-form-label">Categoria</label>
+                                            <select  name="SelectCategoria"  id="SelectCategoria" class="form-control" ng-model="crtvisCtrl.categoria">
+                                                <option value="" selected >Seleccionar</option>   
+                                                <option ng-repeat="option in crtvisCtrl.ListCategorias"  value="{{ option.id_categoria }}">{{ option.titulo }}</option>      
+                                                                
                                             </select>                                  
                                     </div>                                 
                                 </div>
 
+                                
+                        
                                 <div class="form-row">
-                                        <div class="form-group col-md-4">
-                                            <label for="inputCity" class="col-form-label">Comentarios</label>
-                                            <textarea rows="4" cols="50" ng-model="comentario" class="form-control" >
-                                               Comentarios 
+                                        <div class="form-group col-md-6">
+                                            <label for="comentario" class="col-form-label">Comentarios</label>
+                                            <textarea textarea rows="4" cols="50" name="comentario"  id="comentario" ng-model="crtvisCtrl.comentario" class="form-control" >
+                                             
                                             </textarea>
                                         <!-- <input type="text" class="form-control" id="input" ng-model="comentario"> -->
                                     </div>

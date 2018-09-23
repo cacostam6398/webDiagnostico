@@ -24,45 +24,27 @@
                                   
                                     <p class="text-muted font-13">Seleccione empresa</p>
                                     <select class="js-example-basic-single form-control select2" >
-                                        <option value="" disabled >selccione empresa</option>
-                                        <optgroup label="Grupo empresarial 1">
-                                            <option value="1">Empresa 1</option>
-                                            <option value="HI">Hawaii</option>
-                                        </optgroup>
-                                        <optgroup label="Grupo empresarial 2">
-                                            <option value="CA">California</option>
-                                            <option value="NV">Nevada</option>
-                                            <option value="OR">Oregon</option>
-                                            <option value="WA">Washington</option>
-                                        </optgroup>
-                                        <optgroup label="Grupo empresarial 3">
-                                            <option value="AZ">Arizona</option>
-                                            <option value="CO">Colorado</option>
-                                            <option value="ID">Idaho</option>
-                                            <option value="MT">Montana</option>
-                                            <option value="NE">Nebraska</option>
-                                            <option value="NM">New Mexico</option>
-                                            <option value="ND">North Dakota</option>
-                                            <option value="UT">Utah</option>
-                                            <option value="WY">Wyoming</option>
-                                        </optgroup>
-                                       
+                                        <option value="0" disabled >selccione empresa</option>
+                                            
+                                            <option ng-repeat="option in HmeCtrl.ListEmpresas"  value="{{ option.id_empresa }}">{{ option.razon_social }}</option>
+                                                                               
                                        
                                     </select>
                                 </div>
 
                                 <div class="col-md-5">
                                         <div class="row" style="margin-top: 7%;">
-                                                <div class="col-md-4 col-xs-6" style="margin-bottom: 1%">
+                                                <div class="col-md-4 col-xs-6 " style="margin-bottom: 1%">
                                                         <button  ng-click="GoCrearVisita()" class="btn btn-icon btn btn-block btn-success"><span>Realizar Visita</span> &nbsp; <i class="mdi mdi-checkbox-marked-circle"></i></button>
+                                                </div>
+                                                <div class="col-md-4 col-xs-6" style="margin-bottom: 1%">
+                                                        <button ng-click="GoCrearEmpresa()" class="btn btn-icon btn btn-block btn-info"><span>Crear Empresa</span> <i class="mdi mdi-television-guide"></i></button>
                                                 </div>
                                                 <div class="col-md-4 col-xs-6" style="margin-bottom: 1%">
                                                        
                                                         <button ng-click="GoDiagnostico()"  type="button" class="btn btn-icon btn btn-block btn-primary"><span> Diagnostico</span> <i class="mdi mdi-television-guide"></i>&nbsp; </button>
                                                 </div>
-                                                <div class="col-md-4 col-xs-6" style="margin-bottom: 1%">
-                                                        <button ng-click="GoCrearEmpresa()" class="btn btn-icon btn btn-block btn-info"><span>Crear Empresa</span> <i class="mdi mdi-television-guide"></i></button>
-                                                </div>
+                                               
 
                                         </div>
                                 </div>
