@@ -92,7 +92,8 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
        
         var jsonEnvio = {
             'correo': $rootScope.user.correo,
-            'resultado': sumaTotal ,           
+            'resultado': sumaTotal , 
+            "id_empresa"  :$scope.empresaId,
             'token': '' 
         }
         var url = $rootScope.baseUri + "/diagnostico/reg_intento";
