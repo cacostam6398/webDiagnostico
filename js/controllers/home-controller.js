@@ -5,6 +5,8 @@ IdentiApp.controller("HomeController", ['Enviar', 'Cargar', '$location', '$route
 function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter) {
 
 
+    $scope.IddiagnosticoLtd = $rootScope.diagnostico
+    $scope.IdCamaraComercio = $rootScope.camara_Comercio
 
     $scope.initSelect2 = function(){
         $('.js-example-basic-single').select2();
@@ -27,11 +29,22 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
         $location.path('/crearEmpresa');
     }
 
-    $rootScope.GoDiagnostico = function(){    
+    $rootScope.GoDiagnostico = function(){  
+        sessionStorage.emprDiag= $('.js-example-basic-single').select2('data')[0].text;       
         var empresaId = $(".js-example-basic-single").val();
         console.log(empresaId)    
         $location.path('/diagnosticoEmpresa/'+empresaId);
     }
+
+    $rootScope.GoRegistroIntentos = function(){   
+        
+        var empresaId = $(".js-example-basic-single").val();
+        var nameEmpresa = $('.js-example-basic-single').select2('data')[0].text;     
+       
+       
+         $location.path('/registroIntentos/'+empresaId + '/' + nameEmpresa);
+    }
+    
     
 
 

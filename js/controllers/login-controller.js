@@ -133,10 +133,15 @@ IdentiApp.controller("LoginController", ['$scope', '$location', '$rootScope', '$
 	                    swal("Error", $scope.message, "info");
 	                } else {	                
 										
-						sessionStorage.user = JSON.stringify(json.data.usuario);						
+						sessionStorage.user = JSON.stringify(json.data.usuario);	
+						sessionStorage.camara_Comercio =json.data.camara_comercio;	
+						sessionStorage.diagnostico = json.data.diagnostico;					
 						// sessionStorage.token =  json.data.token;
 						$rootScope.user = json.data.usuario;
+						$rootScope.camara_Comercio = json.data.Camara_Comercio
+						$rootScope.diagnostico = json.data.Diagnostico
 						// $rootScope.token = json.data.token;
+						console.log(json)
 						console.log($rootScope.user);	
 						console.log($rootScope);	  
 	                    $location.path('/home');

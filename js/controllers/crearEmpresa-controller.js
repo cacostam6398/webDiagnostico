@@ -41,6 +41,10 @@ function ( $http ,Enviar, Cargar, $location, $route, $scope, $rootScope, $modal,
                 required: true,
                 // minlength: 5
             },
+            ciudad: {
+                required: true,
+                // minlength: 5
+            },
             direccion: {
                 required: true,
                 // minlength: 5

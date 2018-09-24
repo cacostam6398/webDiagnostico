@@ -8,13 +8,17 @@ var IdentiApp = angular.module('Identi', ['ngRoute', 'ui.bootstrap', 'ui.tree', 
 
 IdentiApp.run(function ($rootScope, $location, $http) {
     console.log('http://',location.host);
-    $rootScope.baseUri = 'http://'+ location.host + '/pruebas_back' ;
+    // /pruebas_back
+    // /rest_diagnostico/public
+    $rootScope.baseUri = 'http://'+ location.host + '/rest_diagnostico/public' ;
    
     var storage;
     try {
         if (sessionStorage.getItem('user')) {
             if ($rootScope.user == null || typeof $rootScope.user == 'undefined') {
                 $rootScope.user = JSON.parse(sessionStorage.user);
+                $rootScope.camara_Comercio =   sessionStorage.camara_Comercio 
+                $rootScope.diagnostico     =  sessionStorage.diagnostico 	
                 // $rootScope.token =  sessionStorage.token;
             } else {
                 $location.url("/login");
@@ -36,6 +40,8 @@ IdentiApp.run(function ($rootScope, $location, $http) {
             if (sessionStorage.getItem('user')) {
                 if ($rootScope.user != null || typeof $rootScope.user != 'undefined') {
                     $rootScope.user = JSON.parse(sessionStorage.user)
+                    $rootScope.camara_Comercio =   sessionStorage.camara_Comercio 
+                    $rootScope.diagnostico     =  sessionStorage.diagnostico 	
                     // $rootScope.token = sessionStorage.token;
                 } else {
                     $location.url("/login");
@@ -60,8 +66,9 @@ IdentiApp.config(['$routeProvider', '$locationProvider', '$httpProvider', 'IdleP
         .when('/crearVisita/:EmpId/:nomEmp', { controller: 'crearVisitaController', controllerAs: 'crtvisCtrl',  templateUrl: 'partials/crearVisita.html' })
         .when('/crearEmpresa', { controller: 'crearEmpresaController', templateUrl: 'partials/crearEmpresa.html' })
         .when('/diagnosticoEmpresa/:EmpId', { controller: 'diagnosticoEmpresaController', templateUrl: 'partials/diagnosticoEmpresa.html' })
-    
-	    
+        .when('/registroIntentos/:EmpId/:nomEmp', { controller: 'registroIntentosController', controllerAs: 'regIntentCtrl',  templateUrl: 'partials/registroIntentos.html' })
+        
+        
         .otherwise({ redirectTo: '/login' });
 
 

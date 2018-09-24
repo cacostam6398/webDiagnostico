@@ -1,0 +1,61 @@
+﻿<div  class="wrapper">
+        <div class="container-fluid">
+            <!-- Page title box -->
+            <div class="page-title-alt-bg"></div>
+            <div class="page-title-box">
+                <ol class="breadcrumb float-right">
+                    <li class="breadcrumb-item"><a style="cursor: pointer;" target="_self"  ng-click="GoHome()">Inicio / Registro Intentos</a></li>
+                  
+                </ol>
+                <h4 class="page-title">Registro intentos <b style="text-decoration: underline;">{{nomEmpresa}}</b></h4></div>
+                
+            
+                <!-- End page title box -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="timeline">
+                            <!-- Timeline button -->
+                            <article class="timeline-item alt">
+                                <div class="text-right">
+                                    <div class="time-show first"><a href="#" class="btn btn-danger w-lg">Intentos</a></div>
+                                </div>
+                            </article>
+                            <!-- Timeline item-->
+                           
+                            <article ng-class= "($index % 2) == 0 ? 'timeline-item alt' : 'timeline-item' " ng-repeat="registro in regIntentCtrl.ListRegistros" >
+                                <div class="timeline-desk">
+                                    <div class="panel">
+                                        <div class="timeline-box"><span class="arrow-alt"></span> <span class="timeline-icon bg-info"><i class="mdi mdi-adjust"></i></span>
+                                            <h4 class="text-danger"> Intento No = {{$index + 1}}  </h4>
+                                            <p class="timeline-date text-muted"><small>{{ registro.fecha}}</small></p>
+                                            <p><b>Resultado </b> = {{registro.resultado}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                           
+
+                          
+                        
+                        
+                          
+                         
+                        
+                          
+                        </div>
+                        <!-- end timeline -->
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+
+
+                
+
+
+        </div>
+        <!-- end container -->
+    </div>
+
+
+     
