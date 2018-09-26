@@ -6,13 +6,109 @@ function ( $http ,Enviar, Cargar, $location, $route, $scope, $rootScope, $modal,
       
 
     $scope.empresaJson= {};
-  
+    $scope.contactoJson= {};
+    $scope.paises= []
+    $scope.jsonContactos = []
+
+    $scope.botCrear = true;
+
+    $http.get('js/services/paises.json').then(function(data) {       
+    
+        $scope.paises= data.data;
+     });
+
     $http.get('js/services/RazonesSociales.json').then(function(data) {       
         $scope.razonesSociales = data.data;
         $(".js-example-data-array").select2({
             data: data.data
           })
-     });  
+     });
+    
+    //  jQuery( "#datepicker" ).datepicker({
+    //     dateFormat: "dd/mm/yy"     
+
+    //  });  
+
+     jQuery('form[id="formContacto"]').validate({ // initialize the plugin
+        rules: {
+           
+            nombre: {
+                required: true,
+         
+            },
+            p_apellido: {
+                required: true,
+         
+            },
+            s_apellido: {
+                required: true,
+         
+            },
+            tipo_doc: {
+                required: true,
+         
+            },
+            documento: {
+                required: true,
+                number: true
+            },
+            genero: {
+                required: true,
+         
+            },
+            fec_nacimiento: {
+                required: true,
+         
+            },
+            pais: {
+                required: true,
+         
+            },
+            depto: {
+                required: false,
+         
+            },
+            mcipio: {
+                required: false,
+         
+            },
+            direccion: {
+                required: true,
+         
+            },
+            celular: {
+                required: true,
+                number: true
+            },
+            fijo: {
+                required: true,
+                number: true
+            },
+            correo: {
+                required: true,
+                email: true
+         
+            },
+            nivel_estudio: {
+                required: true,
+         
+            },  
+            ocupacion: {
+                required: true,
+         
+            }, 
+            cargo: {
+                required: true,
+         
+            }
+        },
+        
+        submitHandler: function (form) { // for demo
+       
+            return false; // for demo
+        }
+    });
+
 
      jQuery('form[id="formEmpresa"]').validate({ // initialize the plugin
         rules: {
@@ -67,6 +163,16 @@ function ( $http ,Enviar, Cargar, $location, $route, $scope, $rootScope, $modal,
     });
 
 
+    $scope.AddContacto = function(json){
+        
+        if (jQuery('form[id="formContacto"]').valid()) {  
+            json.correo = $rootScope.user.correo;
+            json.token = '';
+            $scope.jsonContactos.push(json);
+            $scope.contactoJson= {};           
+            swal("info", 'Se creo Contacto', "success");     
+        }
+    }
 
     $scope.enviarEmpresa = function(){
         
@@ -74,23 +180,69 @@ function ( $http ,Enviar, Cargar, $location, $route, $scope, $rootScope, $modal,
         $scope.empresaJson.correo = $rootScope.user.correo;
         $scope.empresaJson.token = ''
 
+        
+
+
         var url = $rootScope.baseUri + "/empresas/crear";
 
         var success = function (json) {
-            console.log(json)
+            
             swal("info", 'Se creo Empresa', "success");         
             $scope.empresaJson= {};
+            $scope.enviarContacto(json.data.empresa.id_empresa);            
+            // $scope.enviarContacto()
+            // $scope.jsonContactos = []    
+            // $scope.contactoJson= {};
         };
         var error = function (resp) {    
             console.log(resp)                  
             swal("info", 'Error en el servicio', "info")
         };
         if (jQuery('form[id="formEmpresa"]').valid()) {  
-            Enviar.elemento($scope, url, success, error, $scope.empresaJson);
+            if ($scope.jsonContactos.length > 0) {
+                Enviar.elemento($scope, url, success, error, $scope.empresaJson);
+            } else {
+                swal("info", 'Inserte un contacto', "info")
+            }
+         
         }
 
     }
 
+
+    $scope.enviarContacto = function(idEmpresa){
+
+
+
+        var url = $rootScope.baseUri + "/contactos/crear";
+        var success = function (json) {
+                 
+            
+        };
+        var error = function (resp) {    
+            console.log(resp)                  
+            swal("info", 'Error en el servicio Contacto', "info")
+        };        
+        
+        for (let index = 0; index < $scope.jsonContactos.length; index++) {
+           
+            var jsonEnvio = $scope.jsonContactos[index]
+            jsonEnvio.id_empresa = idEmpresa
+
+            Enviar.elemento($scope, url, success, error, jsonEnvio);
+        }    
+        
+        $scope.jsonContactos = []    
+        $scope.contactoJson= {};
+
+    }
+  
+    $scope.EliminarJsonContactos = function(ind){
+        $scope.jsonContactos.splice(ind, 1);        
+
+    }
    
+
+
 }
 ]); 

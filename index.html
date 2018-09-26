@@ -18,7 +18,7 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
       <!-- Icons css -->
     
-	
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 	
 	
      <!-- DataTables -->
@@ -28,7 +28,7 @@
 	  <link href="assets/libs/%40mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
 	  <link href="assets/libs/dripicons/webfont/webfont.css" rel="stylesheet" type="text/css">
       <link href="assets/libs/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
-      
+ 
 	  <!-- App css -->
 	  <link rel="stylesheet" href="assets/css/app.min.css">
       <link rel="stylesheet" href="assets/css/main.css">
@@ -212,22 +212,25 @@
   <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
   <!-- Dashboard Init JS -->
   <script src="assets/js/jquery.dashboard.js"></script>
-               <!-- App js -->
-               <script src="assets/js/jquery.core.js"></script>
-               <!-- <script src="assets/js/jquery.app.js"></script> -->
-               <script src="assets/js/jquery.app.js"></script>
-     <!-- <script src="js/jqueryui/validate.jquery.js"></script> -->
-     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
- 
+    <!-- App js -->
+    <script src="assets/js/jquery.core.js"></script>
+    <!-- <script src="assets/js/jquery.app.js"></script> -->
+    <script src="assets/js/jquery.app.js"></script>
+    <!-- <script src="js/jqueryui/validate.jquery.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+
         <script>
             jQuery.extend(jQuery.validator.messages, {
                     required: "Este campo es requerido.",
-                    remote: "Please fix this field.",
-                    email: "Please enter a valid email address.",
+                    remote: "Por favor arregla este campo.",
+                    email: "Por favor, introduce una dirección de correo electrónico válida.",
                     url: "Please enter a valid URL.",
                     date: "Please enter a valid date.",
                     dateISO: "Please enter a valid date (ISO).",
-                    number: "Please enter a valid number.",
+                    number: "Por favor ingrese un número valido.",
                     digits: "Please enter only digits.",
                     creditcard: "Please enter a valid credit card number.",
                     equalTo: "Please enter the same value again.",
@@ -240,5 +243,28 @@
                     min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
 });
         </script>
+        <script>
+                $.datepicker.regional['es'] = {
+                closeText: 'Cerrar',
+                prevText: '< Ant',
+                nextText: 'Sig >',
+                currentText: 'Hoy',
+                monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                monthNamesShort: ['Ene','Feb','Mar','Abr', 'May','Jun','Jul','Ago','Sep', 'Oct','Nov','Dic'],
+                dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+                dayNamesShort: ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'],
+                dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sá'],
+                weekHeader: 'Sm',
+                dateFormat: 'dd/mm/yy',
+                firstDay: 1,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: ''
+                };
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+               $(function () {
+               $("#fecha").datepicker();
+               });
+               </script>
 </body>
 </html>

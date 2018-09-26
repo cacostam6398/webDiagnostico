@@ -1,4 +1,156 @@
-﻿<div  class="wrapper">
+﻿ <!--  Modal content for the above example -->
+ <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myLargeModalLabel">Informacion Contacto</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                        <div class="row">
+                                <div class="col-md-12">
+
+                                    <form name="formContacto" id="formContacto"  >
+                                     
+                                            <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <label class="col-form-label"> Nombre   </label>                                             
+                                                        <input type="text" name="nombre"  class="form-control" placeholder="nombre" ng-model='contactoJson.nombre' > 
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                            <label class="col-form-label"> Primer Apellido </label>
+                                                            <input type="text" name="p_apellido"  class="form-control" placeholder="Primer Apellido" ng-model='contactoJson.p_apellido' > 
+                                                    </div>
+
+                                                    <div class="form-group col-md-4">
+                                                            <label class="col-form-label"> Segundo Apellido  </label>
+                                                            <input type="text" name="s_apellido"  class="form-control" placeholder="Segundo Apellido" ng-model='contactoJson.s_apellido' > 
+                                                    </div>
+                                            </div>
+                                            <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <label class="col-form-label"> Tipo de Documento </label>                                             
+                                                        <!-- <input type="text" name="tipo_doc"  class="form-control" placeholder="Tipo de Documento" ng-model='contactoJson.tipo_doc' >  -->
+                                                        <select  name="tipo_doc"  id="SelectCategoria" class="form-control" ng-model="contactoJson.tipo_doc">
+                                                                <option value="" selected disabled>Seleccionar</option>   
+                                                                <option value="CC">Cédula de Ciudadanía</option>   
+                                                                <option value="CE">Cédula de Extranjería</option> 
+                                                                <option value="NIT">NIT</option> 
+                                                        </select>                                  
+                                                    </div>    
+                                                    <div class="form-group col-md-4">
+                                                       
+                                                            <label class="col-form-label"> Fecha Nacimiento </label>                                             
+                                                            <!-- <input type="text" name="fec_nacimiento"  class="form-control" placeholder="fec_nacimiento" ng-model='contactoJson.fec_nacimiento' >  -->
+                                                            <input class="form-control" type="date" name="fec_nacimiento" id="datepicker" ng-model='contactoJson.fec_nacimiento'>
+                                                        
+                                                        </div>                                                 
+                                                   
+
+                                                    <div class="form-group col-md-4">
+                                                            <label class="col-form-label"> Genero </label>
+                                                            <select  name="genero"  id="SelectCategoria" class="form-control" ng-model="contactoJson.genero">
+                                                                    <option value="" selected disabled>Seleccionar</option>   
+                                                                    <option value="M">Masculino</option>   
+                                                                    <option value="F">Femenino</option> 
+                                                                   
+                                                            </select>  
+                                                    </div>
+                                            </div>
+                                            <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                            <label class="col-form-label"> No Documento </label>
+                                                            <input type="text" name="documento"  class="form-control" placeholder="No Documento" ng-model='contactoJson.documento' > 
+                                                    </div>
+
+                                                    <div class="form-group col-md-4">
+                                                            <label class="col-form-label"> Pais </label>
+                                                            <!-- <input type="text" name="pais"  class="form-control" placeholder="pais" ng-model='contactoJson.pais' >  -->
+                                                           
+                                                            <select  name="pais"  id="pais" class="form-control" ng-model="contactoJson.pais">
+                                                                    <option value="" selected >Seleccionar</option>   
+                                                                    <option ng-repeat="option in paises"  value="{{ option }}">{{ option }}</option>      
+                                                                                    
+                                                                </select>        
+                                                    </div>
+
+                                                    <div class="form-group col-md-4">
+                                                            <label class="col-form-label"> Departamento </label>
+                                                            <input type="text" name="depto"  class="form-control" placeholder="Razon depto" ng-model='contactoJson.depto' > 
+                                                    </div>
+                                            </div>
+                                            <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <label class="col-form-label"> Municipio </label>                                             
+                                                        <input type="text" name="mcipio"  class="form-control" placeholder="mcipio" ng-model='contactoJson.mcipio' > 
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                            <label class="col-form-label">  Direccion </label>
+                                                            <input type="text" name="direccion"  class="form-control" placeholder="direccion" ng-model='contactoJson.direccion' > 
+                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                                                    <div class="form-group col-md-4">
+                                                            <label class="col-form-label"> No celular </label>
+                                                            <input type="number" name="celular"  class="form-control" placeholder="celular" ng-model='contactoJson.celular' > 
+                                                    </div>
+                                            </div>
+                                            <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <label class="col-form-label"> No fijo </label>                                             
+                                                        <input type="number" name="fijo"  class="form-control" placeholder="fijo" ng-model='contactoJson.fijo' > 
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                            <label class="col-form-label"> Correo</label>
+                                                            <input type="email" name="correo"  class="form-control" placeholder="correo" ng-model='contactoJson.correo' > 
+                                                    </div>
+
+                                                    <div class="form-group col-md-4">
+                                                            <label class="col-form-label"> Nivel de estudio </label>
+                                                            <!-- <input type="text" name="nivel_estudio"  class="form-control" placeholder="nivel_estudio" ng-model='contactoJson.nivel_estudio' >  -->
+                                                            <select  name="nivel_estudio"  id="Selectnivel_estudio" class="form-control" ng-model="contactoJson.nivel_estudio">
+                                                                    <option value="" selected disabled>Seleccionar</option>   
+                                                                    <option value="Tecnologica">Tecnologica</option>   
+                                                                    <option value="Universitaria">Universitaria</option> 
+                                                                    <option value="Especializacion">Especializacion</option> 
+                                                                    <option value="Maestria">Maestria</option> 
+                                                            </select>  
+                                                   
+                                                        </div>
+                                            </div>
+                                            <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <label class="col-form-label">Ocupacion </label>                                             
+                                                        <input type="text" name="ocupacion"  class="form-control" placeholder="ocupacion" ng-model='contactoJson.ocupacion' > 
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                            <label class="col-form-label">Cago </label>
+                                                            <input type="text" name="cargo"  class="form-control" placeholder="cargo" ng-model='contactoJson.cargo' > 
+                                                    </div>
+
+                                                    
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                    <button type="button" class="btn btn-light waves-effect" data-dismiss="modal">Cerrar</button>
+                                                    <button type="button" class="btn btn-primary waves-effect waves-light" ng-click="AddContacto(contactoJson)">Guardar Contacto</button>
+                                                </div>
+
+                                    </form>    
+
+
+                                </div>
+                        </div>
+
+
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+
+<div  class="wrapper">
         <div class="container-fluid">
             <!-- Page title box -->
             <div class="page-title-alt-bg"></div>
@@ -17,87 +169,106 @@
                         <div class="card-box">
                             <h4 class="m-t-0 header-title"></h4>
                           
-                            <form name="formEmpresa" id="formEmpresa"  class="form-horizontal">
+                            <form name="formEmpresa" id="formEmpresa"  >
                           
-                                   
-                                        <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">Actividad Economica</label>
-                                                <div class="col-sm-10">
-                                                     <select class="js-example-data-array" ></select>                                                  
-                                                </div>
-                                        </div>
-
-
-                                        <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">Razon Social</label>
-                                                <div class="col-sm-10">
-                                                     
+                                    <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label class="col-form-label">Actividad Economica</label>                                             
+                                                <select class="js-example-data-array" ></select>                         
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                    <label class="col-form-label">Razon Social</label>
                                                     <input type="text" name="razon_social"  class="form-control" placeholder="Razon Social" ng-model='empresaJson.razon_social' > 
-                                                </div>
-                                        </div>
+                                            </div>
+                                    </div>
+                                      
+                                    <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label class="col-form-label">NIT</label>
+                                                <input type="text"  name="nit" class="form-control" placeholder="NIT" ng-model='empresaJson.nit'>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="col-form-label">Afiliacion</label>
+                                                <input type="text" name="afiliacion" class="form-control" placeholder="Afiliacion" ng-model='empresaJson.afiliacion'>
+                                            </div>
+                                    </div>
+                                      
+                                    <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label class="col-form-label">WEB</label>
+                                                <input type="text" name="web" class="form-control" placeholder="WEB" ng-model='empresaJson.web'>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="col-form-label">Representante Legal</label>
+                                                <input type="text" name="repr_legal" class="form-control" placeholder="Representante Legal" ng-model='empresaJson.repr_legal' >
+                                            </div>
+                                    </div>
 
-                                        <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">NIT</label>
-                                                <div class="col-sm-10">
-                                                    <input type="text"  name="nit" class="form-control" placeholder="NIT" ng-model='empresaJson.nit'>
-                                                </div>
+                                    <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label class="col-form-label">Gerente general</label>
+                                                <input type="text" name="ger_general" class="form-control" placeholder="Gerente general" ng-model='empresaJson.ger_general'>
                                             </div>
-
-                                        <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">Afiliacion</label>
-                                                <div class="col-sm-10">
-                                                    <input type="text" name="afiliacion" class="form-control" placeholder="Afiliacion" ng-model='empresaJson.afiliacion'>
-                                                </div>
-                                        </div>
-                                        <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">WEB</label>
-                                                <div class="col-sm-10">
-                                                    <input type="text" name="web" class="form-control" placeholder="WEB" ng-model='empresaJson.web'>
-                                                </div>
-                                            </div>
-                                        <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">Representante Legal</label>
-                                                <div class="col-sm-10">
-                                                    <input type="text" name="repr_legal" class="form-control" placeholder="Representante Legal" ng-model='empresaJson.repr_legal' >
-                                                </div>
-                                            </div>
-                                        <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">Gerente general</label>
-                                                <div class="col-sm-10">
-                                                    <input type="text" name="ger_general" class="form-control" placeholder="Gerente general" ng-model='empresaJson.ger_general'>
-                                                </div>
-                                            </div>
-
-                                        <div class="form-group row">
-                                            <label class="col-sm-2 col-form-label">Ciudad</label>
-                                            <div class="col-sm-10">
+                                            <div class="form-group col-md-6">
+                                                <label class="col-form-label">Ciudad</label>
                                                 <input type="text" name="ciudad" class="form-control" placeholder="Ciudad" ng-model='empresaJson.ciudad'>
                                             </div>
+                                    </div>
+                                     
+                                    <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label class="col-form-label">Direccion</label>
+                                                <input type="text" name="direccion" class="form-control" placeholder="Direccion" ng-model='empresaJson.direccion'>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="col-form-label">Constitucion</label>
+                                                <input type="text" name="constitucion" class="form-control" placeholder="Constitucion" ng-model='empresaJson.constitucion'>
+                                            </div>
+                                    </div>                                        
+                                    <div class="form-row">
+                                            
+                                            
+                                            <div class="form-group col-md-6">
+                                                <label class="col-form-label">CCIT</label>
+                                                <input type="text" name="ccit" class="form-control" placeholder="CCIT" ng-model='empresaJson.ccit'>
+                                            </div>
+                                    </div>       
+
+                                   <div class="row">
+                                       
+                                        <div class="col-lg-12">
+                                            <div class="card-box">
+                                                <div class="form-group ">                                                    
+                                                <button type="button" style="float: right;" class="btn btn-info waves-effect waves-light" data-toggle="modal" data-target=".bs-example-modal-lg"> <span>Agregar Contacto</span> <i class="mdi mdi-account-multiple-plus"></i>&nbsp; </button>
+
+                                            </div>
+                                                <h4 class="m-t-0 header-title">Registro Contacto</h4>                                                
+                                                <table class="table table-sm mb-0">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>#</th>
+                                                                <th>Nombre</th>
+                                                                <th>Correo</th>
+                                                                <th>Documento</th>
+                                                                <th>Opciones</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr ng-repeat="option in jsonContactos" >
+                                                                <th scope="row" >{{$index + 1}}</th>
+                                                                <td>{{ option.nombre + option.p_apellido  }}</td>
+                                                                <td>{{ option.correo }}</td>
+                                                                <td>{{  option.documento }}</td>
+                                                                <td><button ng-click="EliminarJsonContactos($index)" type="button" class="btn btn-icon btn-danger"><i class="mdi mdi-close"></i></button> </td>
+                                                            </tr>                                                          
+                                                        </tbody>
+                                                    </table>
+                                            </div>
                                         </div>
 
-                                        <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">Direccion</label>
-                                                <div class="col-sm-10">
-                                                    <input type="text" name="direccion" class="form-control" placeholder="Direccion" ng-model='empresaJson.direccion'>
-                                                </div>
-                                            </div>
-
-                                        <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">Constitucion</label>
-                                                <div class="col-sm-10">
-                                                    <input type="text" name="constitucion" class="form-control" placeholder="Constitucion" ng-model='empresaJson.constitucion'>
-                                                </div>
-                                            </div>
-
-
-                                        <div class="form-group row">
-                                                <label class="col-sm-2 col-form-label">CCIT</label>
-                                                <div class="col-sm-10">
-                                                    <input type="text" name="ccit" class="form-control" placeholder="CCIT" ng-model='empresaJson.ccit'>
-                                                </div>
-                                            </div>
-
-                                <button ng-click="enviarEmpresa()" class="btn btn-success">Crear Empresa</button>
+                                   </div>   
+                                   <button type="button" ng-click="enviarEmpresa()" class="btn btn-block btn-success">Guardar Empresa</button>
+                               
                             </form>
                         </div>
                         <!-- end card-box -->
