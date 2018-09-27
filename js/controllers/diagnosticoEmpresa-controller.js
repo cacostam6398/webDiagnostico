@@ -40,28 +40,68 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
 
     $scope.endDiagnostic = function(){
 
+        var sumCh = 0;
+        var sumRad = 0;
         for (let index = 0; index <  $scope.jsonPreguntasRespuestas.length; index++) {
 
-            $scope.sumaTotal =  $scope.sumaTotal  +  parseInt(  jQuery('input[name=radio_'+  $scope.jsonPreguntasRespuestas[index].id_pregunta    +']:checked').val()) ; 
-           
-        }
+            if($scope.jsonPreguntasRespuestas[index].tipo == 1){
 
+                sumRad = parseInt(  jQuery('input[name=radio_'+  $scope.jsonPreguntasRespuestas[index].id_pregunta    +']:checked').val());
+                if(sumRad == 100){
+                    $scope.sumaTotal =  $scope.sumaTotal + sumRad ; 
+                }
+               
+
+            }else{
+
+                sumCh = 0
+                let array = jQuery("input[name='ckeck_"+ $scope.jsonPreguntasRespuestas[index].id_pregunta  +"']:checked");
+                for (let z= 0; z < array.length; z++) {                   
+                    let str = array[z].id
+                    sumCh = sumCh + parseInt(str.split("_")[1]) ; 
+                } 
+
+                if(sumCh == 100){
+                    $scope.sumaTotal =   $scope.sumaTotal + sumCh ; 
+                }
+            }
+
+           
+
+        }
       
-        $scope.resultadoFinal =  ( $scope.sumaTotal * 100) /  ($scope.jsonPreguntasRespuestas.length * 100) 
+        $scope.resultadoFinal =   $scope.sumaTotal * 100 /  ($scope.jsonPreguntasRespuestas.length * 100) 
         $scope.resultadoFinal =  Math.round($scope.resultadoFinal);
+              
         $scope.registrarIntento($scope.resultadoFinal);
-        // $scope.sumaTotal = 0
+         $scope.sumaTotal = 0
     }
 
     $scope.registrarRespuestas= function(idIntento){
-        // {"correo":"criosmon2345@universidadean.edu.co","id_intento":"1","token":"","respuestas":[{"id_respuesta":"2"},{"id_respuesta":"4"}]}
+      
         var arryRespuestas = []
         for (let index = 0; index <  $scope.jsonPreguntasRespuestas.length; index++) {
+          
+            if($scope.jsonPreguntasRespuestas[index].tipo == 1){
 
-             let str = jQuery('input[name=radio_'+  $scope.jsonPreguntasRespuestas[index].id_pregunta    +']:checked')[0].id   ; 
-             let respuestaSplit = str.split("_")[0];
-             arryRespuestas.push({'id_respuesta': respuestaSplit })
+                let str1 = jQuery('input[name=radio_'+  $scope.jsonPreguntasRespuestas[index].id_pregunta    +']:checked')[0].id   ;              
+                let respuestaSplit = str1.split("_")[0];   
+                arryRespuestas.push({'id_respuesta': respuestaSplit })
+
+            }else{
+                
+                let array = jQuery("input[name='ckeck_"+ $scope.jsonPreguntasRespuestas[index].id_pregunta  +"']:checked");
+                for (let z= 0; z < array.length; z++) {                   
+                    let str = array[z].id
+                    let respuestaSplit2 = parseInt(str.split("_")[0]) ; 
+                    arryRespuestas.push({'id_respuesta': respuestaSplit2 })
+                } 
+            }
+
         }
+
+      
+
 
         var jsonEnvio = {
             'correo': $rootScope.user.correo,
@@ -83,7 +123,7 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
             $location.path('/home');       
             swal("info", 'Error en el servicio(Registro Intento)', "info")
         };
-         Enviar.elemento($scope, url, success, error, jsonEnvio);
+          Enviar.elemento($scope, url, success, error, jsonEnvio);
 
 
     }
@@ -104,6 +144,7 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
             $scope.registrarRespuestas( $scope.idIntento)
 
             $scope.sumaTotal = 0;          
+            $scope.resultadoFinal = 0 ;  
         };
         var error = function (resp) {    
             console.log(resp)           
