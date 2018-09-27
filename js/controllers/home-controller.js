@@ -44,6 +44,16 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
        
          $location.path('/registroIntentos/'+empresaId + '/' + nameEmpresa);
     }
+
+    $rootScope.GoConsultarVisitas = function(){   
+        
+        var empresaId = $(".js-example-basic-single").val();
+        var nameEmpresa = $('.js-example-basic-single').select2('data')[0].text;     
+       
+       
+         $location.path('/consultarVisitas/'+empresaId + '/' + nameEmpresa);
+    }
+    
     
     
 

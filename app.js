@@ -67,7 +67,7 @@ IdentiApp.config(['$routeProvider', '$locationProvider', '$httpProvider', 'IdleP
         .when('/crearEmpresa', { controller: 'crearEmpresaController', templateUrl: 'partials/crearEmpresa.html' })
         .when('/diagnosticoEmpresa/:EmpId', { controller: 'diagnosticoEmpresaController', templateUrl: 'partials/diagnosticoEmpresa.html' })
         .when('/registroIntentos/:EmpId/:nomEmp', { controller: 'registroIntentosController', controllerAs: 'regIntentCtrl',  templateUrl: 'partials/registroIntentos.html' })
-        
+        .when('/consultarVisitas/:EmpId/:nomEmp', { controller: 'consultarVisitasController', controllerAs: 'consVisCtrl',  templateUrl: 'partials/consultarVisitas.html' })
         
         .otherwise({ redirectTo: '/login' });
 
