@@ -7,9 +7,9 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
 
     $scope.empresaId = $routeParams.EmpId;
     $scope.nomEmpresa = $routeParams.nomEmp
-
-
-
+    $scope.jsonPuntajesRes = []
+    $scope.idSelectRes = 0
+    $scope.resultadoTotalRes = 0
 
     this.ListRegistros = []
 
@@ -38,6 +38,37 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
             jQuery(".progress").hide();
         };
          Enviar.elemento(Ctrl, url, success, error, jsonEnvio);
+
+    }
+
+    this.pruebaResumenIntento = function(idIntento){
+        $scope.jsonPuntajesRes = []
+        $scope.idSelectRes = idIntento
+        $scope.resultadoTotalRes = 0
+        var jsonEnvio = {
+            'correo': $rootScope.user.correo,
+            "id_intento": idIntento,
+            'token': ''
+        }
+      
+        var url =  $rootScope.baseUri + "/diagnostico/p_cat";
+        var Ctrl = this;
+        var success = function (json) {
+            
+         
+            $scope.jsonPuntajesRes = json.data.categoria_puntaje;
+         
+            $scope.resultadoTotalRes = json.data.resultado
+            $('#exampleModal').modal('show');
+            
+
+        };
+        var error = function (resp) {
+            console.log("Error: " + resp);           
+        };
+         Enviar.elemento(Ctrl, url, success, error, jsonEnvio);
+
+        
 
     }
 

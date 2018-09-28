@@ -92,6 +92,8 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
 
     }
 
+
+  
  
     this.cargarListaCategorias();
 }

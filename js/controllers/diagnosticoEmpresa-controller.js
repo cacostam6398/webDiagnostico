@@ -85,7 +85,7 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
             if($scope.jsonPreguntasRespuestas[index].tipo == 1){
 
                 let str1 = jQuery('input[name=radio_'+  $scope.jsonPreguntasRespuestas[index].id_pregunta    +']:checked')[0].id   ;              
-                let respuestaSplit = str1.split("_")[0];   
+                let respuestaSplit = str1.split("_")[1];   
                 arryRespuestas.push({'id_respuesta': respuestaSplit })
 
             }else{

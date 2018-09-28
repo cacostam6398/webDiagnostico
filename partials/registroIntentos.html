@@ -1,4 +1,70 @@
-﻿<div  class="wrapper">
+﻿
+
+  <!--  Modal content for the above example -->
+  <div class="modal fade bs-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myLargeModalLabel">Resumen Intento {{ idSelectRes }}</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+
+                        <div class="row">
+                                <div class="col-lg-12">
+                                        <div class="card-box">
+                                            <h4 class="m-t-0 header-title"> </h4>
+                                            <div class="table-responsive"> 
+                                            <table class="table mb-0">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th> Categoria </th>
+                                                        <th>Total preguntas Correctas</th>
+                                                        <th>Total preguntas</th>
+                                                        <th>Porcentaje por Categoria</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr ng-repeat="(key, registro)  in jsonPuntajesRes">
+                                                        <th scope="row">{{$index + 1}}</th>
+                                                        <td>{{key}}</td>
+                                                        <td>{{registro.total_bien}}</td>
+                                                        <td>{{registro.total_preguntas}}</td>
+                                                        <td>
+                                                               
+                                                                <div class="progress mb-2">
+                                                                        <div class="progress-bar" role="progressbar" style="width: {{ (registro.total_bien * 100 /  registro.total_preguntas) }}%" aria-valuenow="{{ (registro.total_bien * 100 /  registro.total_preguntas) }}" aria-valuemin="0" aria-valuemax="100"> <b>{{ (registro.total_bien * 100 /  registro.total_preguntas) }} %</b></div>
+                                                                    </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            </div>
+                                            
+                                        </div>
+
+                                        <h4>Porcentaje total: {{resultadoTotalRes}} %</h4>
+                                        <div class="progress mb-0">
+                                                    
+                                                <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width:{{resultadoTotalRes}}% " aria-valuenow="{{resultadoTotalRes}}" aria-valuemin="0" aria-valuemax="100">{{resultadoTotalRes}}</div>
+                                            </div>
+                                        <!-- end card-box -->
+                                    </div>
+                        </div>
+
+
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+
+
+
+<div  class="wrapper">
         <div class="container-fluid">
             <!-- Page title box -->
             <div class="page-title-alt-bg"></div>
@@ -22,13 +88,16 @@
                             </article>
                             <!-- Timeline item-->
                            
-                            <article ng-class= "($index % 2) == 0 ? 'timeline-item alt' : 'timeline-item' " ng-repeat="registro in regIntentCtrl.ListRegistros" >
-                                <div class="timeline-desk">
-                                    <div class="panel">
+                            <article ng-class= "($index % 2) == 0 ? 'timeline-item alt' : 'timeline-item' " ng-repeat="registro in regIntentCtrl.ListRegistros " >
+                                <div class="timeline-desk" >
+                                    <div class="panel" >
                                         <div class="timeline-box"><span class="arrow-alt"></span> <span class="timeline-icon bg-info"><i class="mdi mdi-adjust"></i></span>
-                                            <h4 class="text-danger"> Intento No : {{$index + 1}}  </h4>
+                                            <h4 class="text-danger"> Intento No : {{registro.id_intento}}  </h4>
                                             <p class="timeline-date text-muted"><small>{{ registro.fecha}}</small></p>
                                             <p><b>Resultado </b> : {{registro.resultado}} %</p>
+                                           
+                                            <p><a href="" ng-click="regIntentCtrl.pruebaResumenIntento(registro.id_intento)" class="btn btn-outline-success w-md">Ver Resumen</a></p>
+                                            
                                         </div>
                                     </div>
                                 </div>
