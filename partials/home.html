@@ -64,13 +64,18 @@
                                                     
                                                     <button ng-click="GoConsultarVisitas()"  type="button" class="btn btn-icon btn btn-block btn-light"><span>Visitas</span> <i class="mdi mdi-account-location"></i>&nbsp; </button>
                                             </div>
-
+                                            <div class="col-md-6 col-xs-6" style="margin-bottom: 1%" ng-if="HmeCtrl.idRol == 2 || HmeCtrl.idRol  == 3">
+                                                    
+                                                <button ng-click="HmeCtrl.GenerarXls()"  type="button" class="btn btn-icon btn btn-block btn-warning"><span>Excel Diagnostico</span> <i class="mdi mdi-file-excel"></i>&nbsp; </button>
+                                         </div>
 
 
                                         </div>
 
 
                                 </div>
+
+                                <iframe name="tmpFrame" id="tmpFrame" width="1" height="1" style="visibility:hidden;position:absolute;display:none"></iframe>
                          
                             </div>
                             <!-- end row -->

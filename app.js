@@ -11,7 +11,9 @@ IdentiApp.run(function ($rootScope, $location, $http) {
     // /pruebas_back
     // /rest_diagnostico/public
     $rootScope.baseUri = 'http://'+ location.host + '/pruebas_back' ;
-   
+
+
+
     var storage;
     try {
         if (sessionStorage.getItem('user')) {
