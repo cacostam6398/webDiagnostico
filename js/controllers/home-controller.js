@@ -69,7 +69,7 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
             jQuery("#tmpFrame").attr('src', uriExl);       
         };
         var error = function (resp) {
-            console.log("Error: " + resp);
+            console.log(resp);
             swal("info", 'Error en el servicio', "info")
         };
          Enviar.elemento(Ctrl, url, success, error, jsonEnvio);
