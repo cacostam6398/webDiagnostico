@@ -54,14 +54,58 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
          $location.path('/consultarVisitas/'+empresaId + '/' + nameEmpresa);
     }
     
-    
-    this.GenerarXls = function(){
+
+    this.GenerarXlsEmpresas = function(){
         var jsonEnvio = {
             'correo': $rootScope.user.correo,           
             'token': '' 
         }
       
         var url =  $rootScope.baseUri + "/diagnostico/exc_emp_reg";
+        var Ctrl = this;
+        var success = function (json) {            
+           
+            let uriExl =  $rootScope.baseUri +'/'+json.data.loc_archivo
+            jQuery("#tmpFrame").attr('src', uriExl);       
+        };
+        var error = function (resp) {
+            console.log(resp);
+            swal("info", 'Error en el servicio', "info")
+        };
+         Enviar.elemento(Ctrl, url, success, error, jsonEnvio);
+        
+
+    }
+    
+    this.GenerarXlsVisitas = function(){
+        var jsonEnvio = {
+            'correo': $rootScope.user.correo,           
+            'token': '' 
+        }
+       
+        var url =  $rootScope.baseUri + "/diagnostico/exc_vis_reg";
+        var Ctrl = this;
+        var success = function (json) {            
+           
+            let uriExl =  $rootScope.baseUri +'/'+json.data.loc_archivo
+            jQuery("#tmpFrame").attr('src', uriExl);       
+        };
+        var error = function (resp) {
+            console.log(resp);
+            swal("info", 'Error en el servicio', "info")
+        };
+         Enviar.elemento(Ctrl, url, success, error, jsonEnvio);
+        
+
+    }
+
+    this.GenerarXlsDiagnosticos = function(){
+        var jsonEnvio = {
+            'correo': $rootScope.user.correo,           
+            'token': '' 
+        }
+      
+        var url =  $rootScope.baseUri + "/diagnostico/exc_diag_reg";
         var Ctrl = this;
         var success = function (json) {            
            

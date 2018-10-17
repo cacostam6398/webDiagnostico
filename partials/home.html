@@ -64,14 +64,10 @@
                                                     
                                                     <button ng-click="GoConsultarVisitas()"  type="button" class="btn btn-icon btn btn-block btn-light"><span>Visitas</span> <i class="mdi mdi-account-location"></i>&nbsp; </button>
                                             </div>
-                                            <div class="col-md-6 col-xs-6" style="margin-bottom: 1%" ng-if="HmeCtrl.idRol == 2 || HmeCtrl.idRol  == 3">
-                                                    
-                                                <button ng-click="HmeCtrl.GenerarXls()"  type="button" class="btn btn-icon btn btn-block btn-warning"><span>Excel Diagnostico</span> <i class="mdi mdi-file-excel"></i>&nbsp; </button>
-                                         </div>
+            
 
 
                                         </div>
-
 
                                 </div>
 
@@ -79,6 +75,29 @@
                          
                             </div>
                             <!-- end row -->
+                            <h4  ng-if="HmeCtrl.idRol == 2 || HmeCtrl.idRol  == 3" style="margin-top: 2%">Descargas Excel</h4 ><hr>
+                            <div class="row"  ng-if="HmeCtrl.idRol == 2 || HmeCtrl.idRol  == 3" style="margin-top: 2%">
+                                   
+
+                                <div class="col-md-4 col-xs-6" style="margin-bottom: 1%" ng-if="HmeCtrl.idRol == 2 || HmeCtrl.idRol  == 3">
+                                        <button ng-click="HmeCtrl.GenerarXls()"  type="button" class="btn btn-icon btn-outline-secondary btn-rounded w-md btn-block"> <i class="mdi mdi-file-excel" style="font-size: 19px;"></i> <span>Empresas </span> &nbsp; </button>
+                                </div>
+                                <div class="col-md-4 col-xs-6" style="margin-bottom: 1%" ng-if="HmeCtrl.idRol == 2 || HmeCtrl.idRol  == 3">
+                                        <button ng-click="HmeCtrl.GenerarXlsVisitas()"  type="button" class="btn btn-icon btn-outline-secondary btn-rounded w-md btn-block"><i class="mdi mdi-file-excel" style="font-size: 19px;"></i><span>Visias </span> &nbsp; </button>
+                                </div>
+                                <div class="col-md-4 col-xs-6" style="margin-bottom: 1%" ng-if="HmeCtrl.idRol == 2 || HmeCtrl.idRol  == 3">
+                                        <button ng-click="HmeCtrl.GenerarXlsDiagnosticos()"  type="button" class="btn btn-icon btn-outline-secondary btn-rounded w-md btn-block"><i class="mdi mdi-file-excel" style="font-size: 19px;"></i><span>Diagnosticos </span> &nbsp; </button>
+                                </div>
+
+                            </div>
+                            <!-- end row -->
+
+
+
+
+
+
+
                         </div>
                         <!-- end card-box -->
                     </div>
