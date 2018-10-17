@@ -76,11 +76,29 @@
                             </div>
                             <!-- end row -->
                             <h4  ng-if="HmeCtrl.idRol == 2 || HmeCtrl.idRol  == 3" style="margin-top: 2%">Descargas Excel</h4 ><hr>
+
+                             <div class="row" ng-if="HmeCtrl.idRol  == 3">
+                                    <div class="form-group col-md-4">
+                                            <label class="col-form-label"> Selecicone camara de comercio </label>
+                                       
+                                            <!-- <input type="text" name="nivel_estudio"  class="form-control" placeholder="nivel_estudio" ng-model='contactoJson.nivel_estudio' >  -->
+                                            <select  name="camara_Comercio"  id="camara_Comercio" class="form-control" ng-model="HmeCtrl.CamaraDeComercio">                                                     
+                                                    <option selected value="0">Todo</option>
+                                                    <option value="1">Cartagena</option> 
+                                                    <option value="2">Tegucigalpa</option> 
+                                                    <option value="3">Nicaragua</option> 
+                                                    
+                                            </select>  
+                                   
+                                        </div>
+
+                             </div>
+
                             <div class="row"  ng-if="HmeCtrl.idRol == 2 || HmeCtrl.idRol  == 3" style="margin-top: 2%">
                                    
 
                                 <div class="col-md-4 col-xs-6" style="margin-bottom: 1%" ng-if="HmeCtrl.idRol == 2 || HmeCtrl.idRol  == 3">
-                                        <button ng-click="HmeCtrl.GenerarXls()"  type="button" class="btn btn-icon btn-outline-secondary btn-rounded w-md btn-block"> <i class="mdi mdi-file-excel" style="font-size: 19px;"></i> <span>Empresas </span> &nbsp; </button>
+                                        <button ng-click="HmeCtrl.GenerarXlsEmpresas()"  type="button" class="btn btn-icon btn-outline-secondary btn-rounded w-md btn-block"> <i class="mdi mdi-file-excel" style="font-size: 19px;"></i> <span>Empresas </span> &nbsp; </button>
                                 </div>
                                 <div class="col-md-4 col-xs-6" style="margin-bottom: 1%" ng-if="HmeCtrl.idRol == 2 || HmeCtrl.idRol  == 3">
                                         <button ng-click="HmeCtrl.GenerarXlsVisitas()"  type="button" class="btn btn-icon btn-outline-secondary btn-rounded w-md btn-block"><i class="mdi mdi-file-excel" style="font-size: 19px;"></i><span>Visitas </span> &nbsp; </button>

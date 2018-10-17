@@ -7,6 +7,7 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
     this.idRol = $rootScope.user.id_rol
     $scope.IddiagnosticoLtd = $rootScope.diagnostico
     $scope.IdCamaraComercio = $rootScope.camara_Comercio
+    this.CamaraDeComercio = 0
 
     $scope.initSelect2 = function(){
         $('.js-example-basic-single').select2();
@@ -56,13 +57,17 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
     
 
     this.GenerarXlsEmpresas = function(){
+        var Ctrl = this;
         var jsonEnvio = {
             'correo': $rootScope.user.correo,           
             'token': '' 
         }
+        if (Ctrl.CamaraDeComercio  != 0 ) {
+            jsonEnvio.camara_comercio = Ctrl.CamaraDeComercio;
+        }
       
         var url =  $rootScope.baseUri + "/diagnostico/exc_emp_reg";
-        var Ctrl = this;
+        
         var success = function (json) {            
            
             let uriExl =  $rootScope.baseUri +'/'+json.data.loc_archivo
@@ -78,13 +83,18 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
     }
     
     this.GenerarXlsVisitas = function(){
+        var Ctrl = this;
         var jsonEnvio = {
             'correo': $rootScope.user.correo,           
             'token': '' 
         }
-       
+
+        if (Ctrl.CamaraDeComercio != 0 ) {
+            jsonEnvio.camara_comercio = Ctrl.CamaraDeComercio;
+        }
+
         var url =  $rootScope.baseUri + "/diagnostico/exc_vis_reg";
-        var Ctrl = this;
+    
         var success = function (json) {            
            
             let uriExl =  $rootScope.baseUri +'/'+json.data.loc_archivo
@@ -100,13 +110,17 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
     }
 
     this.GenerarXlsDiagnosticos = function(){
+        var Ctrl = this;
         var jsonEnvio = {
             'correo': $rootScope.user.correo,           
             'token': '' 
         }
-      
+
+        if (Ctrl.CamaraDeComercio != 0 ) {
+            jsonEnvio.camara_comercio = Ctrl.CamaraDeComercio;
+        }      
         var url =  $rootScope.baseUri + "/diagnostico/exc_diag_reg";
-        var Ctrl = this;
+      
         var success = function (json) {            
            
             let uriExl =  $rootScope.baseUri +'/'+json.data.loc_archivo
