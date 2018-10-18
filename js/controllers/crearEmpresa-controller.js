@@ -178,6 +178,7 @@ function ( $http ,Enviar, Cargar, $location, $route, $scope, $rootScope, $modal,
         
         $scope.empresaJson.ciu  = $(".js-example-data-array").val();
         $scope.empresaJson.correo = $rootScope.user.correo;
+        $scope.empresaJson.ccit= 0;
         $scope.empresaJson.token = ''
 
         

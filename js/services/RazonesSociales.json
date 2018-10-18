@@ -160,6 +160,10 @@
 		"text": "Extracción de gas natural"
 	},
 	{
+		"id": "0710",
+		"text": "Extracción de minerales de hierro"
+	},
+	{
 		"id": "0721",
 		"text": "Extracción de minerales de uranio y de torio"
 	},
@@ -292,6 +296,10 @@
 		"text": "Producción de malta"
 	},
 	{
+		"id": "1104",
+		"text": "Elaboración de bebidas no alcohólicas"
+	},
+	{
 		"id": "1200",
 		"text": "Elaboración de productos de tabaco"
 	},
@@ -352,10 +360,6 @@
 		"text": "Fabricación de artículos de viaje"
 	},
 	{
-		"id": "",
-		"text": "Fabricación de calzado"
-	},
-	{
 		"id": "1521",
 		"text": "Fabricación de calzado de cuero y piel"
 	},
@@ -412,16 +416,16 @@
 		"text": "Producción de copias a partir de grabaciones originales "
 	},
 	{
-		"id": "1811",
-		"text": "Actividades de impresión"
+		"id": "1910",
+		"text": "Fabricación de productos de hornos de coque"
 	},
 	{
-		"id": "1812",
-		"text": "Actividades de servicios relacionados con la impresión"
+		"id": "1921",
+		"text": "Fabricación de productos de la refinación del petróleo"
 	},
 	{
-		"id": "1820",
-		"text": "Producción de copias a partir de grabaciones originales "
+		"id": "1922",
+		"text": "Actividad de mezcla de combustibles"
 	},
 	{
 		"id": "2011",
@@ -438,10 +442,6 @@
 	{
 		"id": "2014",
 		"text": "Fabricación de caucho sintético en formas primarias"
-	},
-	{
-		"id": "",
-		"text": "Fabricación de otros productos químicos"
 	},
 	{
 		"id": "2021",
@@ -462,6 +462,10 @@
 	{
 		"id": "2030",
 		"text": "Fabricación de fibras sintéticas y artificiales"
+	},
+	{
+		"id": "2100",
+		"text": "Fabricación de productos farmacéuticos"
 	},
 	{
 		"id": "2211",
@@ -516,6 +520,62 @@
 		"text": "Fabricación de otros productos minerales no metálicos n.c.p."
 	},
 	{
+		"id": "2410",
+		"text": "Industrias básicas de hierro y de acero"
+	},
+	{
+		"id": "2421",
+		"text": "Industrias básicas de metales preciosos"
+	},
+	{
+		"id": "2429",
+		"text": "Industrias básicas de otros metales no ferrosos"
+	},
+	{
+		"id": "2431",
+		"text": "Fundición de hierro y de acero"
+	},
+	{
+		"id": "2432",
+		"text": "Fundición de metales no ferrosos "
+	},
+	{
+		"id": "2511",
+		"text": "Fabricación de productos metálicos para uso estructural"
+	},
+	{
+		"id": "2512",
+		"text": "Fabricación de tanques"
+	},
+	{
+		"id": "2513",
+		"text": "Fabricación de generadores de vapor"
+	},
+	{
+		"id": "2520",
+		"text": "Fabricación de armas y municiones"
+	},
+	{
+		"id": "",
+		"text": "Fabricación de otros productos elaborados de metal y actividades de servicios relacionadas con el trabajo de metales"
+	},
+	{
+		"id": "2591",
+		"text": "Forja"
+	},
+	{
+		"id": "2592",
+		"text": "Tratamiento y revestimiento de metales; mecanizado"
+	},
+	{
+		"id": "2593",
+		"text": "Fabricación de artículos de cuchillería"
+	},
+	{
+		"id": "2599",
+		"text": "Fabricación de otros productos elaborados de metal n.c.p."
+	},
+	{
 		"id": "2610",
 		"text": "Fabricación de componentes y tableros electrónicos"
 	},
@@ -552,6 +612,1318 @@
 		"text": "Fabricación de medios magnéticos y ópticos para almacenamiento de datos"
 	},
 	{
+		"id": "2711",
+		"text": "Fabricación de motores"
+	},
+	{
+		"id": "2712",
+		"text": "Fabricación de aparatos de distribución y control de la energía eléctrica"
+	},
+	{
+		"id": "2720",
+		"text": "Fabricación de pilas"
+	},
+	{
+		"id": "2731",
+		"text": "Fabricación de hilos y cables eléctricos y de fibra óptica"
+	},
+	{
+		"id": "2732",
+		"text": "Fabricación de dispositivos de cableado"
+	},
+	{
+		"id": "2740",
+		"text": "Fabricación de equipos eléctricos de iluminación"
+	},
+	{
+		"id": "2750",
+		"text": "Fabricación de aparatos de uso doméstico"
+	},
+	{
+		"id": "2790",
+		"text": "Fabricación de otros tipos de equipo eléctrico n.c.p."
+	},
+	{
+		"id": "2811",
+		"text": "Fabricación de motores"
+	},
+	{
+		"id": "2812",
+		"text": "Fabricación de equipos de potencia hidráulica y neumática"
+	},
+	{
+		"id": "2813",
+		"text": "Fabricación de otras bombas"
+	},
+	{
+		"id": "2814",
+		"text": "Fabricación de cojinetes"
+	},
+	{
+		"id": "2815",
+		"text": "Fabricación de hornos"
+	},
+	{
+		"id": "2816",
+		"text": "Fabricación de equipo de elevación y manipulación"
+	},
+	{
+		"id": "2817",
+		"text": "Fabricación de maquinaria y equipo de oficina (excepto computadoras y equipo periférico)"
+	},
+	{
+		"id": "2818",
+		"text": "Fabricación de herramientas manuales con motor"
+	},
+	{
+		"id": "2819",
+		"text": "Fabricación de otros tipos de maquinaria y equipo de uso general n.c.p."
+	},
+	{
+		"id": "2821",
+		"text": "Fabricación de maquinaria agropecuaria y forestal"
+	},
+	{
+		"id": "2822",
+		"text": "Fabricación de máquinas formadoras de metal y de máquinas herramienta"
+	},
+	{
+		"id": "2823",
+		"text": "Fabricación de maquinaria para la metalurgia"
+	},
+	{
+		"id": "2824",
+		"text": "Fabricación de maquinaria para explotación de minas y canteras y para obras de construcción"
+	},
+	{
+		"id": "2825",
+		"text": "Fabricación de maquinaria para la elaboración de alimentos"
+	},
+	{
+		"id": "2826",
+		"text": "Fabricación de maquinaria para la elaboración de productos textiles"
+	},
+	{
+		"id": "2829",
+		"text": "Fabricación de otros tipos de maquinaria y equipo de uso especial n.c.p."
+	},
+	{
+		"id": "2910",
+		"text": "Fabricación de vehículos automotores y sus motores"
+	},
+	{
+		"id": "2920",
+		"text": "Fabricación de carrocerías para vehículos automotores; fabricación de remolques y semirremolques "
+	},
+	{
+		"id": "2930",
+		"text": "Fabricación de partes"
+	},
+	{
+		"id": "3011",
+		"text": "Construcción de barcos y de estructuras flotantes"
+	},
+	{
+		"id": "3012",
+		"text": "Construcción de embarcaciones de recreo y deporte"
+	},
+	{
+		"id": "3020",
+		"text": "Fabricación de locomotoras y de material rodante para ferrocarriles"
+	},
+	{
+		"id": "3030",
+		"text": "Fabricación de aeronaves"
+	},
+	{
+		"id": "3040",
+		"text": "Fabricación de vehículos militares de combate"
+	},
+	{
+		"id": "3091",
+		"text": "Fabricación de motocicletas"
+	},
+	{
+		"id": "3092",
+		"text": "Fabricación de bicicletas y de sillas de ruedas para personas con discapacidad"
+	},
+	{
+		"id": "3099",
+		"text": "Fabricación de otros tipos de equipo de transporte n.c.p."
+	},
+	{
+		"id": "3110",
+		"text": "Fabricación de muebles "
+	},
+	{
+		"id": "3120",
+		"text": "Fabricación de colchones y somieres"
+	},
+	{
+		"id": "3210",
+		"text": "Fabricación de joyas"
+	},
+	{
+		"id": "3220",
+		"text": "Fabricación de instrumentos musicales"
+	},
+	{
+		"id": "3230",
+		"text": "Fabricación de artículos y equipo para la práctica del deporte"
+	},
+	{
+		"id": "3240",
+		"text": "Fabricación de juegos"
+	},
+	{
+		"id": "3250",
+		"text": "Fabricación de instrumentos"
+	},
+	{
+		"id": "3290",
+		"text": "Otras industrias manufactureras n.c.p."
+	},
+	{
+		"id": "3311",
+		"text": "Mantenimiento y reparación especializado de productos elaborados en metal"
+	},
+	{
+		"id": "3312",
+		"text": "Mantenimiento y reparación especializado de maquinaria y equipo"
+	},
+	{
+		"id": "3313",
+		"text": "Mantenimiento y reparación especializado de equipo electrónico y óptico"
+	},
+	{
+		"id": "3314",
+		"text": "Mantenimiento y reparación especializado de equipo eléctrico"
+	},
+	{
+		"id": "3315",
+		"text": "Mantenimiento y reparación especializado de equipo de transporte"
+	},
+	{
+		"id": "3319",
+		"text": "Mantenimiento y reparación de otros tipos de equipos y sus componentes n.c.p."
+	},
+	{
+		"id": "3320",
+		"text": "Instalación especializada de maquinaria y equipo industrial "
+	},
+	{
+		"id": "3511",
+		"text": "Generación de energía eléctrica"
+	},
+	{
+		"id": "3512",
+		"text": "Transmisión de energía eléctrica"
+	},
+	{
+		"id": "3513",
+		"text": "Distribución de energía eléctrica"
+	},
+	{
+		"id": "3514",
+		"text": "Comercialización de energía eléctrica"
+	},
+	{
+		"id": "3520",
+		"text": "Producción de gas; distribución de combustibles gaseosos por tuberías"
+	},
+	{
+		"id": "3530",
+		"text": "Suministro de vapor y aire acondicionado"
+	},
+	{
+		"id": "3600",
+		"text": "Captación"
+	},
+	{
+		"id": "3700",
+		"text": "Evacuación y tratamiento de aguas residuales"
+	},
+	{
+		"id": "3811",
+		"text": "Recolección de desechos no peligrosos"
+	},
+	{
+		"id": "3812",
+		"text": "Recolección de desechos peligrosos"
+	},
+	{
+		"id": "3821",
+		"text": "Tratamiento y disposición de desechos no peligrosos"
+	},
+	{
+		"id": "3822",
+		"text": "Tratamiento y disposición de desechos peligrosos"
+	},
+	{
+		"id": "3830",
+		"text": "Recuperación de materiales"
+	},
+	{
+		"id": "3900",
+		"text": "Actividades de saneamiento ambiental y otros servicios de gestión de desechos"
+	},
+	{
+		"id": "4111",
+		"text": "Construcción de edificios residenciales"
+	},
+	{
+		"id": "4112",
+		"text": "Construcción de edificios no residenciales"
+	},
+	{
+		"id": "4210",
+		"text": "Construcción de carreteras y vías de ferrocarril"
+	},
+	{
+		"id": "4220",
+		"text": "Construcción de proyectos de servicio público"
+	},
+	{
+		"id": "4290",
+		"text": "Construcción de otras obras de ingeniería civil"
+	},
+	{
+		"id": "4311",
+		"text": "Demolición"
+	},
+	{
+		"id": "4312",
+		"text": "Preparación del terreno"
+	},
+	{
+		"id": "4321",
+		"text": "Instalaciones eléctricas"
+	},
+	{
+		"id": "4322",
+		"text": "Instalaciones de fontanería"
+	},
+	{
+		"id": "4329",
+		"text": "Otras instalaciones especializadas"
+	},
+	{
+		"id": "4330",
+		"text": "Terminación y acabado de edificios y obras de ingeniería civil"
+	},
+	{
+		"id": "4390",
+		"text": "Otras actividades especializadas para la construcción de edificios y obras de ingeniería civil"
+	},
+	{
+		"id": "4511",
+		"text": "Comercio de vehículos automotores nuevos"
+	},
+	{
+		"id": "4512",
+		"text": "Comercio de vehículos automotores usados"
+	},
+	{
+		"id": "4520",
+		"text": "Mantenimiento y reparación de vehículos automotores"
+	},
+	{
+		"id": "4530",
+		"text": "Comercio de partes"
+	},
+	{
+		"id": "4541",
+		"text": "Comercio de motocicletas y de sus partes"
+	},
+	{
+		"id": "4542",
+		"text": "Mantenimiento y reparación de motocicletas y de sus partes y piezas"
+	},
+	{
+		"id": "4610",
+		"text": "Comercio al por mayor a cambio de una retribución o por contrata"
+	},
+	{
+		"id": "4620",
+		"text": "Comercio al por mayor de materias primas agropecuarias; animales vivos"
+	},
+	{
+		"id": "4631",
+		"text": "Comercio al por mayor de productos alimenticios"
+	},
+	{
+		"id": "4632",
+		"text": "Comercio al por mayor de bebidas y tabaco"
+	},
+	{
+		"id": "4641",
+		"text": "Comercio al por mayor de productos textiles"
+	},
+	{
+		"id": "4642",
+		"text": "Comercio al por mayor de prendas de vestir"
+	},
+	{
+		"id": "4643",
+		"text": "Comercio al por mayor de calzado"
+	},
+	{
+		"id": "4644",
+		"text": "Comercio al por mayor de aparatos y equipo de uso doméstico"
+	},
+	{
+		"id": "4645",
+		"text": "Comercio al por mayor de productos farmacéuticos"
+	},
+	{
+		"id": "4649",
+		"text": "Comercio al por mayor de otros utensilios domésticos n.c.p."
+	},
+	{
+		"id": "4651",
+		"text": "Comercio al por mayor de computadores"
+	},
+	{
+		"id": "4652",
+		"text": "Comercio al por mayor de equipo"
+	},
+	{
+		"id": "4653",
+		"text": "Comercio al por mayor de maquinaria y equipo agropecuarios"
+	},
+	{
+		"id": "4659",
+		"text": "Comercio al por mayor de otros tipos de maquinaria y equipo n.c.p."
+	},
+	{
+		"id": "4661",
+		"text": "Comercio al por mayor de combustibles sólidos"
+	},
+	{
+		"id": "4662",
+		"text": "Comercio al por mayor de metales y productos metalíferos"
+	},
+	{
+		"id": "4663",
+		"text": "Comercio al por mayor de materiales de construcción"
+	},
+	{
+		"id": "4664",
+		"text": "Comercio al por mayor de productos químicos básicos"
+	},
+	{
+		"id": "4665",
+		"text": "Comercio al por mayor de desperdicios"
+	},
+	{
+		"id": "4669",
+		"text": "Comercio al por mayor de otros productos n.c.p."
+	},
+	{
+		"id": "4690",
+		"text": "Comercio al por mayor no especializado"
+	},
+	{
+		"id": "4711",
+		"text": "Comercio al por menor en establecimientos no especializados con surtido compuesto principalmente por alimentos"
+	},
+	{
+		"id": "4719",
+		"text": "Comercio al por menor en establecimientos no especializados"
+	},
+	{
+		"id": "4721",
+		"text": "Comercio al por menor de productos agrícolas para el consumo en establecimientos especializados"
+	},
+	{
+		"id": "4722",
+		"text": "Comercio al por menor de leche"
+	},
+	{
+		"id": "4723",
+		"text": "Comercio al por menor de carnes (incluye aves de corral)"
+	},
+	{
+		"id": "4724",
+		"text": "Comercio al por menor de bebidas y productos del tabaco"
+	},
+	{
+		"id": "4729",
+		"text": "Comercio al por menor de otros productos alimenticios n.c.p."
+	},
+	{
+		"id": "4731",
+		"text": "Comercio al por menor de combustible para automotores"
+	},
+	{
+		"id": "4732",
+		"text": "Comercio al por menor de lubricantes (aceites"
+	},
+	{
+		"id": "4741",
+		"text": "Comercio al por menor de computadores"
+	},
+	{
+		"id": "4742",
+		"text": "Comercio al por menor de equipos y aparatos de sonido y de video"
+	},
+	{
+		"id": "4751",
+		"text": "Comercio al por menor de productos textiles en establecimientos especializados"
+	},
+	{
+		"id": "4752",
+		"text": "Comercio al por menor de artículos de ferretería"
+	},
+	{
+		"id": "4753",
+		"text": "Comercio al por menor de tapices"
+	},
+	{
+		"id": "4754",
+		"text": "Comercio al por menor de electrodomésticos y gasodomésticos de uso doméstico"
+	},
+	{
+		"id": "4755",
+		"text": "Comercio al por menor de artículos y utensilios de uso doméstico"
+	},
+	{
+		"id": "4759",
+		"text": "Comercio al por menor de otros artículos domésticos en establecimientos especializados"
+	},
+	{
+		"id": "4761",
+		"text": "Comercio al por menor de libros"
+	},
+	{
+		"id": "4762",
+		"text": "Comercio al por menor de artículos deportivos"
+	},
+	{
+		"id": "4769",
+		"text": "Comercio al por menor de otros artículos culturales y de entretenimiento n.c.p. en establecimientos especializados"
+	},
+	{
+		"id": "4771",
+		"text": "Comercio al por menor de prendas de vestir y sus accesorios (incluye artículos de piel) en establecimientos especializados"
+	},
+	{
+		"id": "4772",
+		"text": "Comercio al por menor de todo tipo de calzado y artículos de cuero y sucedáneos del cuero en establecimientos especializados."
+	},
+	{
+		"id": "4773",
+		"text": "Comercio al por menor de productos farmacéuticos y medicinales"
+	},
+	{
+		"id": "4774",
+		"text": "Comercio al por menor de otros productos nuevos en establecimientos especializados"
+	},
+	{
+		"id": "4775",
+		"text": "Comercio al por menor de artículos de segunda mano"
+	},
+	{
+		"id": "4781",
+		"text": "Comercio al por menor de alimentos"
+	},
+	{
+		"id": "4782",
+		"text": "Comercio al por menor de productos textiles"
+	},
+	{
+		"id": "4789",
+		"text": "Comercio al por menor de otros productos en puestos de venta móviles"
+	},
+	{
+		"id": "4791",
+		"text": "Comercio al por menor realizado a través de Internet"
+	},
+	{
+		"id": "4792",
+		"text": "Comercio al por menor realizado a través de casas de venta o por correo"
+	},
+	{
+		"id": "4799",
+		"text": "Otros tipos de comercio al por menor no realizado en establecimientos"
+	},
+	{
+		"id": "4911",
+		"text": "Transporte férreo de pasajeros"
+	},
+	{
+		"id": "4912",
+		"text": "Transporte férreo de carga "
+	},
+	{
+		"id": "4921",
+		"text": "Transporte de pasajeros"
+	},
+	{
+		"id": "4922",
+		"text": "Transporte mixto"
+	},
+	{
+		"id": "4923",
+		"text": "Transporte de carga por carretera"
+	},
+	{
+		"id": "4930",
+		"text": "Transporte por tuberías"
+	},
+	{
+		"id": "5011",
+		"text": "Transporte de pasajeros marítimo y de cabotaje "
+	},
+	{
+		"id": "5012",
+		"text": "Transporte de carga marítimo y de cabotaje "
+	},
+	{
+		"id": "5021",
+		"text": "Transporte fluvial de pasajeros"
+	},
+	{
+		"id": "5022",
+		"text": "Transporte fluvial de carga"
+	},
+	{
+		"id": "5111",
+		"text": "Transporte aéreo nacional de pasajeros "
+	},
+	{
+		"id": "5112",
+		"text": "Transporte aéreo internacional de pasajeros "
+	},
+	{
+		"id": "5121",
+		"text": "Transporte aéreo nacional de carga "
+	},
+	{
+		"id": "5122",
+		"text": "Transporte aéreo internacional de carga "
+	},
+	{
+		"id": "5210",
+		"text": "Almacenamiento y depósito"
+	},
+	{
+		"id": "5221",
+		"text": "Actividades de estaciones"
+	},
+	{
+		"id": "5222",
+		"text": "Actividades de puertos y servicios complementarios para el transporte acuático"
+	},
+	{
+		"id": "5223",
+		"text": "Actividades de aeropuertos"
+	},
+	{
+		"id": "5224",
+		"text": "Manipulación de carga"
+	},
+	{
+		"id": "5229",
+		"text": "Otras actividades complementarias al transporte"
+	},
+	{
+		"id": "5310",
+		"text": "Actividades postales nacionales"
+	},
+	{
+		"id": "5320",
+		"text": "Actividades de mensajería"
+	},
+	{
+		"id": "5511",
+		"text": "Alojamiento en hoteles "
+	},
+	{
+		"id": "5512",
+		"text": "Alojamiento en apartahoteles"
+	},
+	{
+		"id": "5513",
+		"text": "Alojamiento en centros vacacionales "
+	},
+	{
+		"id": "5514",
+		"text": "Alojamiento rural"
+	},
+	{
+		"id": "5519",
+		"text": "Otros tipos de alojamientos para visitantes"
+	},
+	{
+		"id": "5520",
+		"text": "Actividades de zonas de camping y parques para vehículos recreacionales"
+	},
+	{
+		"id": "5530",
+		"text": "Servicio por horas "
+	},
+	{
+		"id": "5590",
+		"text": "Otros tipos de alojamiento n.c.p."
+	},
+	{
+		"id": "5611",
+		"text": "Expendio a la mesa de comidas preparadas"
+	},
+	{
+		"id": "5612",
+		"text": "Expendio por autoservicio de comidas preparadas"
+	},
+	{
+		"id": "5613",
+		"text": "Expendio de comidas preparadas en cafeterías"
+	},
+	{
+		"id": "5619",
+		"text": "Otros tipos de expendio de comidas preparadas n.c.p."
+	},
+	{
+		"id": "5621",
+		"text": "Catering para eventos"
+	},
+	{
+		"id": "5629",
+		"text": "Actividades de otros servicios de comidas"
+	},
+	{
+		"id": "5630",
+		"text": "Expendio de bebidas alcohólicas para el consumo dentro del establecimiento"
+	},
+	{
+		"id": "5811",
+		"text": "Edición de libros"
+	},
+	{
+		"id": "5812",
+		"text": "Edición de directorios y listas de correo"
+	},
+	{
+		"id": "5813",
+		"text": "Edición de periódicos"
+	},
+	{
+		"id": "5819",
+		"text": "Otros trabajos de edición"
+	},
+	{
+		"id": "5820",
+		"text": "Edición de programas de informática (software)"
+	},
+	{
+		"id": "5911",
+		"text": "Actividades de producción de películas cinematográficas"
+	},
+	{
+		"id": "5912",
+		"text": "Actividades de posproducción de películas cinematográficas"
+	},
+	{
+		"id": "5913",
+		"text": "Actividades de distribución de películas cinematográficas"
+	},
+	{
+		"id": "5914",
+		"text": "Actividades de exhibición de películas cinematográficas y videos"
+	},
+	{
+		"id": "5920",
+		"text": "Actividades de grabación de sonido y edición de musica"
+	},
+	{
+		"id": "6010",
+		"text": "Actividades de programación y transmisión en el servicio de radiodifusión sonora"
+	},
+	{
+		"id": "6020",
+		"text": "Actividades de programación y transmisión de televisión"
+	},
+	{
+		"id": "6110",
+		"text": "Actividades de telecomunicaciones alámbricas"
+	},
+	{
+		"id": "6120",
+		"text": "Actividades de telecomunicaciones inalámbricas"
+	},
+	{
+		"id": "6130",
+		"text": "Actividades de telecomunicación satelital"
+	},
+	{
+		"id": "6190",
+		"text": "Otras actividades de telecomunicaciones"
+	},
+	{
+		"id": "6201",
+		"text": "Actividades de desarrollo de sistemas informáticos (planificación"
+	},
+	{
+		"id": "6202",
+		"text": "Actividades de consultoría informática y actividades de administración de instalaciones informáticas"
+	},
+	{
+		"id": "6209",
+		"text": "Otras actividades de tecnologías de información y actividades de servicios informáticos"
+	},
+	{
+		"id": "6311",
+		"text": "Procesamiento de datos"
+	},
+	{
+		"id": "6312",
+		"text": "Portales web"
+	},
+	{
+		"id": "6391",
+		"text": "Actividades de agencias de noticias"
+	},
+	{
+		"id": "6399",
+		"text": "Otras actividades de servicio de información n.c.p."
+	},
+	{
+		"id": "6411",
+		"text": "Banco Central"
+	},
+	{
+		"id": "6412",
+		"text": "Bancos comerciales"
+	},
+	{
+		"id": "6421",
+		"text": "Actividades de las corporaciones financieras"
+	},
+	{
+		"id": "6422",
+		"text": "Actividades de las compañías de financiamiento"
+	},
+	{
+		"id": "6423",
+		"text": "Banca de segundo piso"
+	},
+	{
+		"id": "6424",
+		"text": "Actividades de las cooperativas financieras"
+	},
+	{
+		"id": "6431",
+		"text": "Fideicomisos"
+	},
+	{
+		"id": "6432",
+		"text": "Fondos de cesantías"
+	},
+	{
+		"id": "6491",
+		"text": "Leasing financiero (arrendamiento financiero)"
+	},
+	{
+		"id": "6492",
+		"text": "Actividades financieras de fondos de empleados y otras formas asociativas del sector solidario"
+	},
+	{
+		"id": "6493",
+		"text": "Actividades de compra de cartera o factoring"
+	},
+	{
+		"id": "6494",
+		"text": "Otras actividades de distribución de fondos"
+	},
+	{
+		"id": "6495",
+		"text": "Instituciones especiales oficiales"
+	},
+	{
+		"id": "6499",
+		"text": "Otras actividades de servicio financiero"
+	},
+	{
+		"id": "6511",
+		"text": "Seguros generales "
+	},
+	{
+		"id": "6512",
+		"text": "Seguros de vida"
+	},
+	{
+		"id": "6513",
+		"text": "Reaseguros"
+	},
+	{
+		"id": "6514",
+		"text": "Capitalización"
+	},
+	{
+		"id": "6521",
+		"text": "Servicios de seguros sociales de salud"
+	},
+	{
+		"id": "6522",
+		"text": "Servicios de seguros sociales de riesgos profesionales"
+	},
+	{
+		"id": "6531",
+		"text": "Régimen de prima media con prestación definida (RPM)"
+	},
+	{
+		"id": "6532",
+		"text": "Régimen de ahorro individual (RAI)"
+	},
+	{
+		"id": "6611",
+		"text": "Administración de mercados financieros"
+	},
+	{
+		"id": "6612",
+		"text": "Corretaje de valores y de contratos de productos básicos"
+	},
+	{
+		"id": "6613",
+		"text": "Otras actividades relacionadas con el mercado de valores"
+	},
+	{
+		"id": "6614",
+		"text": "Actividades de las casas de cambio"
+	},
+	{
+		"id": "6615",
+		"text": "Actividades de los profesionales de compra y venta de divisas"
+	},
+	{
+		"id": "6619",
+		"text": "Otras actividades auxiliares de las actividades de servicios financieros n.c.p."
+	},
+	{
+		"id": "6621",
+		"text": "Actividades de agentes y corredores de seguros"
+	},
+	{
+		"id": "6629",
+		"text": "Evaluación de riesgos y daños"
+	},
+	{
+		"id": "6630",
+		"text": "Actividades de administración de fondos"
+	},
+	{
+		"id": "6810",
+		"text": "Actividades inmobiliarias realizadas con bienes propios o arrendados"
+	},
+	{
+		"id": "6820",
+		"text": "Actividades inmobiliarias realizadas a cambio de una retribución o por contrata "
+	},
+	{
+		"id": "6910",
+		"text": "Actividades jurídicas"
+	},
+	{
+		"id": "6920",
+		"text": "Actividades de contabilidad"
+	},
+	{
+		"id": "7010",
+		"text": "Actividades de administración empresarial"
+	},
+	{
+		"id": "7020",
+		"text": "Actividades de consultaría de gestión"
+	},
+	{
+		"id": "7110",
+		"text": "Actividades de arquitectura e ingeniería y otras actividades conexas de consultoría técnica"
+	},
+	{
+		"id": "7120",
+		"text": "Ensayos y análisis técnicos"
+	},
+	{
+		"id": "7210",
+		"text": "Investigaciones y desarrollo experimental en el campo de las ciencias naturales y la ingeniería "
+	},
+	{
+		"id": "7220",
+		"text": "Investigaciones y desarrollo experimental en el campo de las ciencias sociales y las humanidades"
+	},
+	{
+		"id": "7310",
+		"text": "Publicidad"
+	},
+	{
+		"id": "7320",
+		"text": "Estudios de mercado y realización de encuestas de opinión pública"
+	},
+	{
+		"id": "7410",
+		"text": "Actividades especializadas de diseño "
+	},
+	{
+		"id": "7420",
+		"text": "Actividades de fotografía"
+	},
+	{
+		"id": "7490",
+		"text": "Otras actividades profesionales"
+	},
+	{
+		"id": "7500",
+		"text": "Actividades veterinarias"
+	},
+	{
+		"id": "7710",
+		"text": "Alquiler y arrendamiento de vehículos automotores"
+	},
+	{
+		"id": "7721",
+		"text": "Alquiler y arrendamiento de equipo recreativo y deportivo"
+	},
+	{
+		"id": "7722",
+		"text": "Alquiler de videos y discos "
+	},
+	{
+		"id": "7729",
+		"text": "Alquiler y arrendamiento de otros efectos personales y enseres domésticos n.c.p."
+	},
+	{
+		"id": "7730",
+		"text": "Alquiler y arrendamiento de otros tipos de maquinaria"
+	},
+	{
+		"id": "7740",
+		"text": "Arrendamiento de propiedad intelectual y productos similares"
+	},
+	{
+		"id": "7810",
+		"text": "Actividades de agencias de empleo"
+	},
+	{
+		"id": "7820",
+		"text": "Actividades de agencias de empleo temporal"
+	},
+	{
+		"id": "7830",
+		"text": "Otras actividades de suministro de recurso humano"
+	},
+	{
+		"id": "7911",
+		"text": "Actividades de las agencias de viaje"
+	},
+	{
+		"id": "7912",
+		"text": "Actividades de operadores turísticos"
+	},
+	{
+		"id": "7990",
+		"text": "Otros servicios de reserva y actividades relacionadas"
+	},
+	{
+		"id": "8010",
+		"text": "Actividades de seguridad privada"
+	},
+	{
+		"id": "8020",
+		"text": "Actividades de servicios de sistemas de seguridad"
+	},
+	{
+		"id": "8030",
+		"text": "Actividades de detectives e investigadores privados"
+	},
+	{
+		"id": "8110",
+		"text": "Actividades combinadas de apoyo a instalaciones"
+	},
+	{
+		"id": "8121",
+		"text": "Limpieza general interior de edificios"
+	},
+	{
+		"id": "8129",
+		"text": "Otras actividades de limpieza de edificios e instalaciones industriales"
+	},
+	{
+		"id": "8130",
+		"text": "Actividades de paisajismo y servicios de mantenimiento conexos"
+	},
+	{
+		"id": "8211",
+		"text": "Actividades combinadas de servicios administrativos de oficina"
+	},
+	{
+		"id": "8219",
+		"text": "Fotocopiado"
+	},
+	{
+		"id": "8220",
+		"text": "Actividades de centros de llamadas (Call center)"
+	},
+	{
+		"id": "8230",
+		"text": "Organización de convenciones y eventos comerciales"
+	},
+	{
+		"id": "8291",
+		"text": "Actividades de agencias de cobranza y oficinas de calificación crediticia"
+	},
+	{
+		"id": "8292",
+		"text": "Actividades de envase y empaque"
+	},
+	{
+		"id": "8299",
+		"text": "Otras actividades de servicio de apoyo a las empresas n.c.p."
+	},
+	{
+		"id": "8411",
+		"text": "Actividades legislativas de la administración pública"
+	},
+	{
+		"id": "8412",
+		"text": "Actividades ejecutivas de la administración pública"
+	},
+	{
+		"id": "8413",
+		"text": "Regulación de las actividades de organismos que prestan servicios de salud"
+	},
+	{
+		"id": "8414",
+		"text": "Actividades reguladoras y facilitadoras de la actividad económica"
+	},
+	{
+		"id": "8415",
+		"text": "Actividades de los otros órganos de control"
+	},
+	{
+		"id": "8421",
+		"text": "Relaciones exteriores "
+	},
+	{
+		"id": "8422",
+		"text": "Actividades de defensa"
+	},
+	{
+		"id": "8423",
+		"text": "Orden público y actividades de seguridad"
+	},
+	{
+		"id": "8424",
+		"text": "Administración de justicia"
+	},
+	{
+		"id": "8430",
+		"text": "Actividades de planes de seguridad social de afiliación obligatoria"
+	},
+	{
+		"id": "8511",
+		"text": "Educación de la primera infancia"
+	},
+	{
+		"id": "8512",
+		"text": "Educación preescolar"
+	},
+	{
+		"id": "8513",
+		"text": "Educación básica primaria"
+	},
+	{
+		"id": "8521",
+		"text": "Educación básica secundaria "
+	},
+	{
+		"id": "8522",
+		"text": "Educación media académica"
+	},
+	{
+		"id": "8523",
+		"text": "Educación media técnica y de formación laboral"
+	},
+	{
+		"id": "8530",
+		"text": "Establecimientos que combinan diferentes niveles de educación "
+	},
+	{
+		"id": "8541",
+		"text": "Educación técnica profesional"
+	},
+	{
+		"id": "8542",
+		"text": "Educación tecnológica"
+	},
+	{
+		"id": "8543",
+		"text": "Educación de instituciones universitarias o de escuelas tecnológicas"
+	},
+	{
+		"id": "8544",
+		"text": "Educación de universidades"
+	},
+	{
+		"id": "8551",
+		"text": "Formación académica no formal "
+	},
+	{
+		"id": "8552",
+		"text": "Enseñanza deportiva y recreativa"
+	},
+	{
+		"id": "8553",
+		"text": "Enseñanza cultural"
+	},
+	{
+		"id": "8559",
+		"text": "Otros tipos de educación n.c.p."
+	},
+	{
+		"id": "8560",
+		"text": "Actividades de apoyo a la educación"
+	},
+	{
+		"id": "8610",
+		"text": "Actividades de hospitales y clínicas"
+	},
+	{
+		"id": "8621",
+		"text": "Actividades de la práctica médica"
+	},
+	{
+		"id": "8622",
+		"text": "Actividades de la práctica odontológica"
+	},
+	{
+		"id": "8691",
+		"text": "Actividades de apoyo diagnóstico"
+	},
+	{
+		"id": "8692",
+		"text": "Actividades de apoyo terapéutico"
+	},
+	{
+		"id": "8699",
+		"text": "Otras actividades de atención de la salud humana"
+	},
+	{
+		"id": "8710",
+		"text": "Actividades de atención residencial medicalizada de tipo general"
+	},
+	{
+		"id": "8720",
+		"text": "Actividades de atención residencial"
+	},
+	{
+		"id": "8730",
+		"text": "Actividades de atención en instituciones para el cuidado de personas mayores y/o discapacitadas"
+	},
+	{
+		"id": "8790",
+		"text": "Otras actividades de atención en instituciones con alojamiento"
+	},
+	{
+		"id": "8810",
+		"text": "Actividades de asistencia social sin alojamiento para personas mayores y discapacitadas"
+	},
+	{
+		"id": "8890",
+		"text": "Otras actividades de asistencia social sin alojamiento"
+	},
+	{
+		"id": "9001",
+		"text": "Creación literaria"
+	},
+	{
+		"id": "9002",
+		"text": "Creación musical"
+	},
+	{
+		"id": "9003",
+		"text": "Creación teatral"
+	},
+	{
+		"id": "9004",
+		"text": "Creación audiovisual"
+	},
+	{
+		"id": "9005",
+		"text": "Artes plásticas y visuales"
+	},
+	{
+		"id": "9006",
+		"text": "Actividades teatrales"
+	},
+	{
+		"id": "9007",
+		"text": "Actividades de espectáculos musicales en vivo"
+	},
+	{
+		"id": "9008",
+		"text": "Otras actividades de espectáculos en vivo"
+	},
+	{
+		"id": "9101",
+		"text": "Actividades de bibliotecas y archivos"
+	},
+	{
+		"id": "9102",
+		"text": "Actividades y funcionamiento de museos"
+	},
+	{
+		"id": "9103",
+		"text": "Actividades de jardines botánicos"
+	},
+	{
+		"id": "9200",
+		"text": "Actividades de juegos de azar y apuestas"
+	},
+	{
+		"id": "9311",
+		"text": "Gestión de instalaciones deportivas"
+	},
+	{
+		"id": "9312",
+		"text": "Actividades de clubes deportivos"
+	},
+	{
+		"id": "9319",
+		"text": "Otras actividades deportivas"
+	},
+	{
+		"id": "9321",
+		"text": "Actividades de parques de atracciones y parques temáticos"
+	},
+	{
+		"id": "9329",
+		"text": "Otras actividades recreativas y de esparcimiento n.c.p."
+	},
+	{
+		"id": "9411",
+		"text": "Actividades de asociaciones empresariales y de empleadores"
+	},
+	{
+		"id": "9412",
+		"text": "Actividades de asociaciones profesionales"
+	},
+	{
+		"id": "9420",
+		"text": "Actividades de sindicatos de empleados"
+	},
+	{
+		"id": "9491",
+		"text": "Actividades de asociaciones religiosas"
+	},
+	{
+		"id": "9492",
+		"text": "Actividades de asociaciones políticas"
+	},
+	{
+		"id": "9499",
+		"text": "Actividades de otras asociaciones n.c.p."
+	},
+	{
 		"id": "9511",
 		"text": "Mantenimiento y reparación de computadores y de equipo periférico"
 	},
@@ -566,6 +1938,50 @@
 	{
 		"id": "9522",
 		"text": "Mantenimiento y reparación de aparatos y equipos domésticos y de jardinería "
+	},
+	{
+		"id": "9523",
+		"text": "Reparación de calzado y artículos de cuero"
+	},
+	{
+		"id": "9524",
+		"text": "Reparación de muebles y accesorios para el hogar"
+	},
+	{
+		"id": "9529",
+		"text": "Mantenimiento y reparación de otros efectos personales y enseres domésticos"
+	},
+	{
+		"id": "9601",
+		"text": "Lavado y limpieza"
+	},
+	{
+		"id": "9602",
+		"text": "Peluquería y otros tratamientos de belleza"
+	},
+	{
+		"id": "9603",
+		"text": "Pompas fúnebres y actividades relacionadas"
+	},
+	{
+		"id": "9609",
+		"text": "Otras actividades de servicios personales n.c.p."
+	},
+	{
+		"id": "9700",
+		"text": "Actividades de los hogares individuales como empleadores de personal doméstico"
+	},
+	{
+		"id": "9810",
+		"text": "Actividades no diferenciadas de los hogares individuales como productores de bienes para uso propio"
+	},
+	{
+		"id": "9820",
+		"text": "Actividades no diferenciadas de los hogares individuales como productores de servicios para uso propio"
+	},
+	{
+		"id": "9900",
+		"text": "Actividades de organizaciones y entidades extraterritoriales"
 	},
 	{
 		"id": ""
