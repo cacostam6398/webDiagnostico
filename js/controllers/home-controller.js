@@ -8,6 +8,7 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
     $scope.IddiagnosticoLtd = $rootScope.diagnostico
     $scope.IdCamaraComercio = $rootScope.camara_Comercio
     this.CamaraDeComercio = 0
+    $scope.nombreEmpresaLink = ''
 
     $scope.initSelect2 = function(){
         $('.js-example-basic-single').select2();
@@ -37,6 +38,8 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
         $location.path('/diagnosticoEmpresa/'+empresaId);
     }
 
+
+
     $rootScope.GoRegistroIntentos = function(){   
         
         var empresaId = $(".js-example-basic-single").val();
@@ -55,6 +58,10 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
          $location.path('/consultarVisitas/'+empresaId + '/' + nameEmpresa);
     }
     
+    this.ModalLink = function(){
+        var nameEmpresa = $('.js-example-basic-single').select2('data')[0].text;     
+        $scope.nombreEmpresaLink = nameEmpresa;
+    }
 
     this.GenerarXlsEmpresas = function(){
         var Ctrl = this;
@@ -131,6 +138,68 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
             swal("info", 'Error en el servicio', "info")
         };
          Enviar.elemento(Ctrl, url, success, error, jsonEnvio);
+        
+
+    }
+
+    $('#myModal').on('hidden.bs.modal', function (e) {
+        var div = document.getElementById('alert-dark');
+
+        div.innerHTML = '';
+      })
+
+    this.GenerarLink = function(){
+        var Ctrl = this;
+        var empresaId = $(".js-example-basic-single").val();
+
+
+
+        var jsonEnvio = {
+            'correo': $rootScope.user.correo,           
+            'token': '' ,
+            "id_empresa":empresaId
+        }
+
+            
+        var url =  $rootScope.baseUri + "/diagnostico/gen_link";      
+        var success = function (json) {         
+
+            console.log(json.data.Link.url)   
+            //  let uriExl =  $rootScope.baseUri +'/'+empresaId+'/' +json.data.Link.url      
+
+          
+             var path = $location.absUrl();
+
+         
+             var urr = path.replace('home', 'diagnosticoEmpresaRemote' )
+
+             let uriExl = urr +'/'+empresaId+'/' +json.data.Link.url   
+             
+             var div = document.getElementById('alert-dark');
+
+            div.innerHTML = uriExl;
+            
+            $.toast({
+                heading: 'Success',
+                text: 'Link Generado Correctamente !',
+                hideAfter: 4000 ,
+                icon: 'success',
+                position: 'top-left',
+                stack: false
+            })
+
+             console.log(uriExl)
+
+
+        };
+        var error = function (resp) {
+            console.log(resp);
+            swal("info", 'Error en el servicio', "info")
+        };
+
+        console.log(jsonEnvio)
+        Enviar.elemento(Ctrl, url, success, error, jsonEnvio);
+               
         
 
     }

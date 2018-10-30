@@ -50,11 +50,11 @@
                                                         <button ng-click="GoDiagnostico()"  type="button" class="btn btn-icon btn btn-block btn-primary"><span> Diagnostico</span> <i class="mdi  mdi-file-document"></i>&nbsp; </button>
                                                 </div>
 
-
-                                                <div class="col-md-6 col-xs-6" style="margin-bottom: 1%">
+                                                <div class="col-md-6 col-xs-6" style="margin-bottom: 1%" ng-if="HmeCtrl.idRol  == 1">
                                                        
-                                                        <button ng-click="GoRegistroIntentos()"  type="button" class="btn btn-icon btn btn-block btn-secondary "><span>Intentos</span> <i class="mdi mdi-clipboard-check"></i>&nbsp; </button>
+                                                        <button data-toggle="modal" ng-click="HmeCtrl.ModalLink()" data-target="#myModal"   type="button" class="btn btn-icon btn btn-block btn-primary"><span>Generar link Diagnostico</span> <i class="mdi mdi-link"></i>&nbsp; </button>
                                                 </div>
+                                               
 
                                         </div>
 
@@ -64,6 +64,11 @@
                                                     
                                                     <button ng-click="GoConsultarVisitas()"  type="button" class="btn btn-icon btn btn-block btn-light"><span>Visitas</span> <i class="mdi mdi-account-location"></i>&nbsp; </button>
                                             </div>
+
+                                            <div class="col-md-6 col-xs-6" style="margin-bottom: 1%">
+                                                       
+                                                        <button ng-click="GoRegistroIntentos()"  type="button" class="btn btn-icon btn btn-block btn-secondary "><span>Intentos</span> <i class="mdi mdi-clipboard-check"></i>&nbsp; </button>
+                                                </div>
             
 
 
@@ -140,3 +145,46 @@
         
         </script> -->
 
+        
+  <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                  
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title">Link de diagnostico {{nombreEmpresaLink}}</h4>
+                  
+                    </div>
+                    
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                     
+                        <div class="row">
+                                <div class="col-md-12">
+                                        <button type="button" ng-click="HmeCtrl.GenerarLink()" class="btn btn-outline-success btn-block"><i class="mdi mdi-link-variant mr-1"></i> <span>Generar</span></button>
+                                </div>
+
+                        </div>
+                        <br>
+                        <div class="row">
+                                <div class="col-md-12">
+                                                <div class="alert alert-dark" role="alert"> 
+                                                        <p style="word-break: break-all;" id="alert-dark"></p>
+                                                </div>
+                                </div>
+        
+                        </div>
+
+
+                    </div>
+                    
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>

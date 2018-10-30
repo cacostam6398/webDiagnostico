@@ -1,25 +1,24 @@
 ﻿
 
 
-IdentiApp.controller("diagnosticoEmpresaController", ['Enviar', 'Cargar', '$location', '$route', '$scope', '$rootScope', '$modal', '$filter','$routeParams',
+IdentiApp.controller("diagnosticoEmpresaRemoteController", ['Enviar', 'Cargar', '$location', '$route', '$scope', '$rootScope', '$modal', '$filter','$routeParams',
 function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter,$routeParams) {
       
-    $scope.nombreEmpresa =    sessionStorage.emprDiag;
+    $scope.nombreEmpresa =    ''
     $scope.empresaId = $routeParams.EmpId;
+    $scope.Lnk = $routeParams.str;
     
-    $scope.diagnostico = $rootScope.diagnostico
-    $scope.camara_Comercio = $rootScope.camara_Comercio
+    // $scope.diagnostico = $rootScope.diagnostico
+    // $scope.camara_Comercio = $rootScope.camara_Comercio
     $scope.jsonPreguntasRespuestas = []
 
 
     $scope.lstPreguntas= function(){
         
         var jsonEnvio = {
-            'correo': $rootScope.user.correo,
-            'id_diagnostico': $scope.diagnostico ,           
-            'token': '' 
+            "url": $scope.Lnk         
         }
-        var url = $rootScope.baseUri + "/diagnostico/listar_p";
+        var url = $rootScope.baseUri + "/diagnostico/link_lp";
 
         var success = function (json) {
            
@@ -28,7 +27,7 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
         };
         var error = function (resp) {    
             console.log(resp)           
-             $location.path('/home');       
+            // $location.path('/home');       
             swal("info", 'Error en el servicio', "info")
         };
         Enviar.elemento($scope, url, success, error, jsonEnvio);
@@ -104,14 +103,13 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
 
 
         var jsonEnvio = {
-            'correo': $rootScope.user.correo,
-            'id_intento': idIntento ,           
-            'token': '' ,
+            "url": $scope.Lnk,             
+            'id_intento': idIntento ,  
             'respuestas' : arryRespuestas
         }
      
 
-        var url = $rootScope.baseUri + "/diagnostico/grabar_respuestas";
+        var url = $rootScope.baseUri + "/diagnostico/link_gp";
 
         var success = function (json) {
             console.log(json)
@@ -131,12 +129,10 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
     $scope.registrarIntento= function(sumaTotal){
        
         var jsonEnvio = {
-            'correo': $rootScope.user.correo,
-            'resultado': sumaTotal , 
-            "id_empresa"  :$scope.empresaId,
-            'token': '' 
+            "url": $scope.Lnk,           
+            'resultado': sumaTotal    
         }
-        var url = $rootScope.baseUri + "/diagnostico/reg_intento";
+        var url = $rootScope.baseUri + "/diagnostico/link_ri";
 
         var success = function (json) {
           
@@ -157,7 +153,7 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
     }
 
     
-    $scope.lstPreguntas();
+     $scope.lstPreguntas();
 
 }
 ]); 

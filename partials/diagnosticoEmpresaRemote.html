@@ -1,0 +1,75 @@
+﻿<div  class="wrapper">
+        <div class="container-fluid">
+            <!-- Page title box -->
+            <div class="page-title-alt-bg"></div>
+            <div class="page-title-box">
+                <ol class="breadcrumb float-right">
+                    <li class="breadcrumb-item"><a style="cursor: pointer;" target="_self"  ng-click="GoHome()">Inicio / Crear Visita</a></li>
+                  
+                </ol>
+                <h4 class="page-title">Diagnostico Remoto Empresa {{nombreEmpresa}}  </h4></div>
+      
+
+                             <!-- Form row -->
+            <div class="row">
+                    <div class="col-md-12">
+                            <div class="row">
+                                    <div class="col-lg-6" ng-repeat="preunt in jsonPreguntasRespuestas">
+
+
+                                        <div class="card m-b-30 card-body">
+                                            <h5 class="card-title">{{$index + 1}}.     {{preunt.txt_pregunta}}  </h5>
+                                            <p class="card-text">{{ preunt.tipo == 1 ? 'Pregunta unica respuesta' : 'Pregunta con multiple respuesta' }}</p>
+                                            <div class="row" style="margin-left: 1%">
+                                                    <div class="col-xs-12  content-quest ">
+
+                                                          
+
+                                                        <div class="box-mobil box-mobil-btn btn-block" ng-repeat="choice in preunt.respuestas">
+                                                                            
+                                                                <div ng-if="preunt.tipo == 2" class="custom-control custom-checkbox">
+                                                                        <input  type="checkbox" 
+                                                                            name="ckeck_{{choice.id_pregunta}}" 
+                                                                            id="{{choice.id_respuesta}}_{{choice.puntaje}}"
+                                                                            class="custom-control-input" >
+                                                                        <label class="custom-control-label" for="{{choice.id_respuesta}}_{{choice.puntaje}}">{{choice.texto}}  </label>
+                                                                </div>
+
+
+                                                                <input ng-if="preunt.tipo == 1" type="radio"
+                                                                        name="radio_{{choice.id_pregunta}}" 
+                                                                        id="radio_{{choice.id_respuesta}}_{{choice.id_pregunta}"
+                                                                        value="{{choice.puntaje }}">
+                                                                        
+                                                                <label  ng-if="preunt.tipo == 1"  for="radio_{{choice.id_respuesta}}_{{choice.id_pregunta}">
+                                                                        {{choice.texto}}                                         
+                                                                </label>
+                                                        </div>                                                              
+                                                    </div>
+                                                </div>  
+                                            </div>  
+                                            
+                                            
+                                     </div>                                                                                                        
+                                </div> <!-- end col preguntas 1 -->
+                                
+                           
+                                    
+
+                                <button style="cursor: pointer;"  ng-click="endDiagnostic()"  type="button" class="btn btn-icon btn btn-block btn-primary"><span> Terminar Diagnostico</span> <i class="mdi mdi-television-guide"></i>&nbsp; </button>
+
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row -->
+           
+
+                
+
+
+        </div>
+        <!-- end container -->
+    </div>
+
+
+     

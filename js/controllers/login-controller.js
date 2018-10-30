@@ -1,7 +1,7 @@
 ﻿
 
-IdentiApp.controller("LoginController", ['$scope', '$location', '$rootScope', '$modal', 'Enviar','Recibir',
-	function ($scope, $location, $rootScope, $modal, Enviar, Recibir) {
+IdentiApp.controller("LoginController", ['$scope', '$location', '$rootScope', '$modal', 'Enviar','Recibir',"CONFIG","ROLES",
+	function ($scope, $location, $rootScope, $modal, Enviar, Recibir,CONFIG,ROLES) {
 	 
 	 
 	    $scope.formR1 = true;
@@ -140,6 +140,9 @@ IdentiApp.controller("LoginController", ['$scope', '$location', '$rootScope', '$
 						$rootScope.user = json.data.usuario;
 						$rootScope.camara_Comercio = json.data.Camara_Comercio
 						$rootScope.diagnostico = json.data.Diagnostico
+						CONFIG.ROL_CURRENT_USER = $rootScope.user.id_rol
+
+						
 						// $rootScope.token = json.data.token;
 						console.log(json)
 						console.log($rootScope.user);	
