@@ -20,9 +20,7 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
         }
         var url = $rootScope.baseUri + "/diagnostico/link_lp";
 
-        var success = function (json) {
-           
-
+        var success = function (json) {            
             $scope.jsonPreguntasRespuestas = json.data.Preguntas
         };
         var error = function (resp) {    
