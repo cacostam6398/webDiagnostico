@@ -22,13 +22,11 @@ function ( $http ,Enviar, Cargar, $location, $route, $scope, $rootScope, $modal,
         $(".js-example-data-array").select2({
             data: data.data
           })
-     });
-    
+     });    
     //  jQuery( "#datepicker" ).datepicker({
     //     dateFormat: "dd/mm/yy"     
 
     //  });  
-
      jQuery('form[id="formContacto"]').validate({ // initialize the plugin
         rules: {
            
@@ -163,8 +161,7 @@ function ( $http ,Enviar, Cargar, $location, $route, $scope, $rootScope, $modal,
     });
 
 
-    $scope.AddContacto = function(json){
-        
+    $scope.AddContacto = function(json){        
         if (jQuery('form[id="formContacto"]').valid()) {  
             json.correo = $rootScope.user.correo;
             json.token = '';
