@@ -26,9 +26,9 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
             $scope.jsonPreguntasRespuestas = json.data.Preguntas
         };
         var error = function (resp) {    
-            console.log(resp)           
-            // $location.path('/home');       
-            swal("info", 'Error en el servicio', "info")
+                     
+             $location.path('/home');       
+            swal("info", resp.data.messages , "info")
         };
         Enviar.elemento($scope, url, success, error, jsonEnvio);
 
