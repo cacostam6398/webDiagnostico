@@ -29,10 +29,10 @@ IdentiApp.constant('CONFIG', {
 
 
 IdentiApp.run(function ($rootScope, $location, $http, CONFIG,ROLES) {
-    console.log('http://',location.host);
+    console.log('https://',location.host);
     // /pruebas_back
     // /rest_diagnostico/public
-    $rootScope.baseUri = 'http://'+ location.host + '/pruebas_back' ;
+    $rootScope.baseUri = 'httsp://'+ location.host + '/pruebas_back' ;
 
 
 
