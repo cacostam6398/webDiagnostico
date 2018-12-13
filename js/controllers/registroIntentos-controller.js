@@ -72,6 +72,31 @@ function (Enviar, Cargar, $location, $route, $scope, $rootScope, $modal, $filter
 
     }
 
+    this.GenerarXlsDetalleIntentos = function(idIntento){
+        var Ctrl = this;
+        var jsonEnvio = {
+            'correo': $rootScope.user.correo,           
+            'token': '',
+            'id_intento': idIntento
+        }
+        
+      
+        var url =  $rootScope.baseUri + "/diagnostico/resp_int";
+        
+        var success = function (json) {            
+           
+            let uriExl =  $rootScope.baseUri +'/'+json.data.loc_archivo
+            jQuery("#tmpFrame").attr('src', uriExl);       
+        };
+        var error = function (resp) {
+            console.log(resp);
+            swal("info", 'Error en el servicio', "info")
+        };
+         Enviar.elemento(Ctrl, url, success, error, jsonEnvio);
+        
+
+    }
+
  
     this.cargarListaRegistros();
 }

@@ -96,7 +96,11 @@
                                             <p class="timeline-date text-muted"><small>{{ registro.fecha}}</small></p>
                                             <p><b>Resultado </b> : {{registro.resultado}} %</p>
                                            
-                                            <p><a href="" ng-click="regIntentCtrl.pruebaResumenIntento(registro.id_intento)" class="btn btn-outline-success w-md">Ver Resumen</a></p>
+                                            <p> <a href="" ng-click="regIntentCtrl.GenerarXlsDetalleIntentos(registro.id_intento)" class="btn btn-outline-primary w-md">Descargar Detalle</a> &nbsp;
+                                               
+                                                <a href="" ng-click="regIntentCtrl.pruebaResumenIntento(registro.id_intento)" class="btn btn-outline-success w-md">Ver Resumen</a>
+                                            </p>
+                                            
                                             
                                         </div>
                                     </div>
@@ -120,7 +124,7 @@
 
 
                 
-
+                <iframe name="tmpFrame" id="tmpFrame" width="1" height="1" style="visibility:hidden;position:absolute;display:none"></iframe>
 
         </div>
         <!-- end container -->
