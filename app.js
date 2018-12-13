@@ -32,7 +32,7 @@ IdentiApp.run(function ($rootScope, $location, $http, CONFIG,ROLES) {
     console.log('https://',location.host);
     // /pruebas_back
     // /rest_diagnostico/public
-    $rootScope.baseUri = 'httsp://'+ location.host + '/pruebas_back' ;
+    $rootScope.baseUri = 'https://'+ location.host + '/pruebas_back' ;
 
 
 
