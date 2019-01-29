@@ -76,13 +76,13 @@
 
                                                     <div class="form-group col-md-4">
                                                             <label class="col-form-label"> Departamento </label>
-                                                            <input type="text" name="depto"  class="form-control" placeholder="Razon depto" ng-model='contactoJson.depto' > 
+                                                            <input type="text" name="depto"  class="form-control" placeholder="departamento" ng-model='contactoJson.depto' > 
                                                     </div>
                                             </div>
                                             <div class="form-row">
                                                     <div class="form-group col-md-4">
                                                         <label class="col-form-label"> Municipio </label>                                             
-                                                        <input type="text" name="mcipio"  class="form-control" placeholder="mcipio" ng-model='contactoJson.mcipio' > 
+                                                        <input type="text" name="mcipio"  class="form-control" placeholder="municipio" ng-model='contactoJson.mcipio' > 
                                                     </div>
                                                     <div class="form-group col-md-4">
                                                             <label class="col-form-label">  Direccion </label>
@@ -109,18 +109,27 @@
                                                             <!-- <input type="text" name="nivel_estudio"  class="form-control" placeholder="nivel_estudio" ng-model='contactoJson.nivel_estudio' >  -->
                                                             <select  name="nivel_estudio"  id="Selectnivel_estudio" class="form-control" ng-model="contactoJson.nivel_estudio">
                                                                     <option value="" selected disabled>Seleccionar</option>   
-                                                                    <option value="Tecnologica">Tecnologica</option>   
-                                                                    <option value="Universitaria">Universitaria</option> 
+                                                                    <option value="Bachillerato">Bachillerato</option>   
+                                                                    <option value="Doctorado">Doctorado</option> 
                                                                     <option value="Especializacion">Especializacion</option> 
                                                                     <option value="Maestria">Maestria</option> 
-                                                            </select>  
-                                                   
+                                                                    <option value="primariaprofesional">Pimaria Profesional</option> 
+                                                                    <option value="tecnicoLaboral">Tecnico Laboral</option> 
+                                                                    <option value="tecnicoProfesional">Tecnico Profesional</option> 
+                                                            </select>                                                   
                                                         </div>
                                             </div>
                                             <div class="form-row">
                                                     <div class="form-group col-md-4">
-                                                        <label class="col-form-label">Ocupacion </label>                                             
-                                                        <input type="text" name="ocupacion"  class="form-control" placeholder="ocupacion" ng-model='contactoJson.ocupacion' > 
+                                                        <label class="col-form-label">Ocupacion </label> 
+                                                        <select  name="ocupacion"  id="ocupacion" class="form-control" ng-model="contactoJson.ocupacion">
+                                                                <option value="" selected disabled>Seleccionar</option>   
+                                                                <option value="Administrador">Administrador</option>   
+                                                                <option value="Colaborador">Colaborador</option> 
+                                                                <option value="Propietario">Propietario</option> 
+                                                               
+                                                        </select>                                                   
+                                                        
                                                     </div>
                                                     <div class="form-group col-md-4">
                                                             <label class="col-form-label">Cargo </label>
@@ -185,8 +194,8 @@
                                       
                                     <div class="form-row">
                                             <div class="form-group col-md-6">
-                                                <label class="col-form-label">NIT</label>
-                                                <input type="text"  name="nit" class="form-control" placeholder="NIT" ng-model='empresaJson.nit'>
+                                                <label class="col-form-label">RUC</label>
+                                                <input type="text"  name="nit" class="form-control" placeholder="RUC" ng-model='empresaJson.nit'>
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label class="col-form-label">Afiliacion</label>
@@ -258,7 +267,7 @@
                                                         <tbody>
                                                             <tr ng-repeat="option in jsonContactos" >
                                                                 <th scope="row" >{{$index + 1}}</th>
-                                                                <td>{{ option.nombre + option.p_apellido  }}</td>
+                                                                <td>{{ option.nombre + ' ' + option.p_apellido  }}</td>
                                                                 <td>{{ option.correo }}</td>
                                                                 <td>{{  option.documento }}</td>
                                                                 <td><button ng-click="EliminarJsonContactos($index)" type="button" class="btn btn-icon btn-danger"><i class="mdi mdi-close"></i></button> </td>

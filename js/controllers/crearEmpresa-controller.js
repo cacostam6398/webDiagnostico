@@ -47,8 +47,8 @@ function ( $http ,Enviar, Cargar, $location, $route, $scope, $rootScope, $modal,
          
             },
             documento: {
-                required: true,
-                number: true
+                required: true
+                // number: true
             },
             genero: {
                 required: true,
@@ -76,11 +76,11 @@ function ( $http ,Enviar, Cargar, $location, $route, $scope, $rootScope, $modal,
             },
             celular: {
                 required: true,
-                number: true
+                // number: true
             },
             fijo: {
                 required: true,
-                number: true
+                // number: true
             },
             correo: {
                 required: true,
